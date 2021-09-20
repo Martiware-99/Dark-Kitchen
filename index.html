@@ -15,15 +15,18 @@
 <body>
 
     <fieldset>
+
         <legend>Votre avis compte énormement</legend>
-        <img src="images/thanks.gif" title="Thanks" width="400" height="300">
+        <img src="thanks.gif" title="Thanks" width="400" height="300">
         <form>
             <label for="comment">Avis du client:</label><br>
-            <textarea placeholder="Votre avis..."></textarea>
+            <textarea placeholder="Votre avis et votre nom..."></textarea>
 
         </form>
-        <input type="mail" placeholder="Votre nom...">
-        <button>Envoyer</button> <br>
+
+        <button id="button">Envoyer</button>
+
+    </fieldset>
     </fieldset>
 
 
@@ -40,31 +43,31 @@
     </div>
 
     <main>
-            
+
         <section>
 
             liste des plats
 
             <article class="container">
-              <div class="card">
-                <div class="front">
-                    <footer>
-                        <p>Nom du plat</p>
-                        <p class="prix">9,99$</p>
-                    </footer>
+                <div class="card">
+                    <div class="front">
+                        <footer>
+                            <p>Nom du plat</p>
+                            <p class="prix">9,99$</p>
+                        </footer>
+                    </div>
+                    <div class="back">
+                        <h3 class="center">Pasta bolognese</h3>
+                        <p class="center">La spécialité de Pastadora, un plat de pâte bolognaise accompagné d'un petit bol de parmesan.</p>
+                        <h4 class=" center">liste d'ingrédient</h4>
+                        <ul>
+                            <li>Penne</li>
+                            <li>Sauce tomate</li>
+                            <li>Viande hâchée</li>
+                            <li>Parmesan</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="back">
-                    <h3 class="center">Pasta bolognese</h3>
-                    <p class="center">La spécialité de Pastadora, un plat de pâte bolognaise accompagné d'un petit bol de parmesan.</p>
-                    <h4 class=" center">liste d'ingrédient</h4>
-                    <ul>
-                        <li>Penne</li>
-                        <li>Sauce tomate</li>
-                        <li>Viande hâchée</li>
-                        <li>Parmesan</li>
-                    </ul>
-                </div>
-            </div> 
             </article>
             <ion-icon name="cart"></ion-icon>
         </section>
@@ -103,7 +106,7 @@
     <script src="js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
