@@ -14,7 +14,3 @@ Création d'une dark kitchen :
 
 
 ![Rendu](images/rendu.png)
-
-## Perf lighthouse 
-
-![perf](images/perf.png)
