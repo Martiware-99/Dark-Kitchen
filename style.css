@@ -36,6 +36,12 @@
     height: 100%;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    border: black;
+    border-style: solid;
+    background: url(https://cdn.imgbin.com/14/9/17/imgbin-borders-and-frames-black-and-white-elegant-page-borders-white-floral-frame-illustration-WPWwyddmt9ze3z7s8wW4uvHcB.jpg);
+    background-size:cover;
 }
 
 .prix {
@@ -48,4 +54,12 @@
     align-items: center;
     width: 100%;
     padding: 1rem;
+}
+
+.center {
+    text-align: center;
+}
+
+ul {
+    margin-left: 50px;
 }
