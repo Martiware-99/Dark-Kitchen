@@ -1,23 +1,63 @@
+/* Header / Body / Footer */
+
+header {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: hsla(155, 95%, 23%, 1);
+    background: linear-gradient(360deg, hsla(155, 95%, 23%, 1) 0%, hsla(0, 0%, 100%, 1) 33%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 100%, 1) 66%, hsla(0, 100%, 50%, 1) 100%);
+    background: -moz-linear-gradient(360deg, hsla(155, 95%, 23%, 1) 0%, hsla(0, 0%, 100%, 1) 33%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 100%, 1) 66%, hsla(0, 100%, 50%, 1) 100%);
+    background: -webkit-linear-gradient(360deg, hsla(155, 95%, 23%, 1) 0%, hsla(0, 0%, 100%, 1) 33%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 100%, 1) 66%, hsla(0, 100%, 50%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#037143", endColorstr="#FFFFFF", GradientType=1 );
+    padding: 0 3%;
+    align-items: center;
+
+}
+
+body {
+ font: 64px;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Logo header / darkmode */ 
+
+img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Flexbox */
+
 .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 90px 15px;
+    padding: 0 15%;
+    margin: 90px 15px;
     flex-wrap: wrap;
 }
+
+/* Repas */
 .back {
         display: flex;
         flex-direction: column;
         border: black;
         border-style: solid;
-
         height: 50vh;
         width: 20vw;
         background: url(https://cdn.imgbin.com/14/9/17/imgbin-borders-and-frames-black-and-white-elegant-page-borders-white-floral-frame-illustration-WPWwyddmt9ze3z7s8wW4uvHcB.jpg);
         background-repeat: no-repeat;
         background-size: contain;
         background-position-x: center;
-        padding: 35px;
+        padding: 35px 15px;
+        margin: 15px 0;
 }
 
 .center {
@@ -27,3 +67,71 @@
 ul {
     margin-left: 50px;
 }
+
+/* Panier */
+.panier {
+    display: flex   ;
+    position: absolute;
+    flex-direction: row;
+    align-self: flex-end;
+}
+
+ /* Tri bouton */
+ .dropbtn {
+    background-color: gray;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 66vw;
+  }
+  
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: gray;
+  }
+  
+/* Tri bouton input */
+  #myInput {
+    box-sizing: border-box;
+    background-image: url('searchicon.png');
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    width: 66vw;
+  }
+  
+  #myInput:focus {outline: 3px solid #ddd;}
+
+  /* menu dropdown */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown text */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+  }
+  
+  /* lien dans le dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;} 

@@ -13,6 +13,53 @@
 </head>
 
 <body>
+
+    <header>
+        <img src="images/logo_small.png" alt="logo">
+        <h1>Pastadore</h1>
+        <img src="images/darkmode.png" alt="darkmode">
+    </header>
+
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Tri</button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+              <a href="#pizza">Pizza</a>
+              <a href="#pasta">Pasta</a>
+              <a href="#vegan">Vegan</a>
+              <a href="#drink">Drink</a>
+            </div>
+          </div> 
+    </nav>
+
+    <div class="panier">
+        <ion-icon name="cart"></ion-icon>
+        prix total : 54$
+    </div>
+
+    <main>
+
+        <section class="container">
+
+                
+                <div class="front"></div>
+
+                <article class="back">
+                    <h3 class="center">Pasta bolognese</h3>
+                    <p class="center">La spécialité de Pastadora, un plat de pâte bolognaise accompagné d'un petit bol de parmesan.</p>
+                    <h4 class=" center">liste d'ingrédient</h4>
+                    <ul>
+                        <li>Penne</li>
+                        <li>Sauce tomate</li>
+                        <li>Viande hâchée</li>
+                        <li>Parmesan</li>
+                    </ul>
+                </article>
+            
+        </section>
+
+    </main>
+
     <fieldset>
         <legend>Votre avis compte énormement</legend>
         <img src="images/thanks.gif" title="Thanks" width="400" height="300">
@@ -24,43 +71,7 @@
         <input type="mail" placeholder="Votre email...">
         <button>Envoyer</button> <br>
     </fieldset>
-
-
-    <header>
-        <img src="images/logo_small.png" alt="logo">
-        <p>Pastadore</p>
-        <img src="images/darkmode.png" alt="darkmode">
-    </header>
-
-    <nav>Tri</nav>
-
-    <div>
-        prix total : 54$
-    </div>
-
-    <main>
-
-        <section>
-            <article class="container">
-                <div class="front"></div>
-                <div class="back">
-                    <h3 class="center">Pasta bolognese</h3>
-                    <p class="center">La spécialité de Pastadora, un plat de pâte bolognaise accompagné d'un petit bol de parmesan.</p>
-                    <h4 class=" center">liste d'ingrédient</h4>
-                    <ul>
-                        <li>Penne</li>
-                        <li>Sauce tomate</li>
-                        <li>Viande hâchée</li>
-                        <li>Parmesan</li>
-                    </ul>
-                </div>
-            </article>
-            
-            <ion-icon name="cart"></ion-icon>
-        </section>
-
-    </main>
-
+    
     <footer>
         <nav>
             <a href="https://facebook.com/test" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
