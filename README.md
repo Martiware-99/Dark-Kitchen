@@ -1,4 +1,20 @@
-#Pastadore dark kitchen 
+## Description
 
-design mockup 
-![pastadore website](https://raw.githubusercontent.com/Martiware-99/Dark-Kitchen/main/Untitled-2021-09-20-1007.png)
+Création d'une dark kitchen : 
+- HTML and CSS
+- Responsive design
+- Javascript Basics
+- The DOM
+
+## Lien
+
+[Github page](https://Martiware-99.github.io/Dark-Kitchen/)
+
+## Rendu
+
+
+![Rendu](images/rendu.png)
+
+## Perf lighthouse 
+
+![perf](images/perf.png)
