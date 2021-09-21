@@ -15,32 +15,24 @@
     <header>
         <img src="images/logo_small.png" alt="logo">
         <h1>Pastadore</h1>
-        <button onclick="darktheme()"><img src="images/darkmode.png" alt="darkmode"></button>
+        <button onclick="darktheme()" class="dark"><img src="images/darkmode.png" alt="darkmode"></button>
     </header>
 
-        <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Tri</button>
-            <div id="myDropdown" class="dropdown-content">
-              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-              <button onclick="filterDish('pizza')">Pizza</button>
-              <button onclick="filterDish('pasta')">Pasta</button>
-              <button onclick="filterDish('vegan')">Vegan</button>
-              <button onclick="filterDish('drink')">Drink</button>
-              <button onclick="filterDish(null)">No filter</button>
-            </div>
-          </div> 
-
-
-
     <!-- Panier -->
-    <div class="panier">
-        <ion-icon name="cart"></ion-icon>
-        prix total : 54$
-    </div>
+
 
     <!-- Menu -->
     <main>
         <h2 class="plat"> liste des plats </h2>
+        
+        <nav class="button">
+            <button onclick="filterDish('pizza')">Pizza</button>
+            <button onclick="filterDish('pasta')">Pasta</button>
+            <button onclick="filterDish('vegan')">Vegan</button>
+            <button onclick="filterDish('drink')">Drink</button>
+            <button onclick="filterDish(null)">No filter</button>
+        </nav>
+
         <section class="container">
 
         </section>
