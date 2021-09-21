@@ -11,13 +11,11 @@
 </head>
 
 <body>
-
+    <!-- Header  -->
     <header>
         <img src="images/logo_small.png" alt="logo">
         <h1>Pastadore</h1>
-
         <button onclick="darktheme()"><img src="images/darkmode.png" alt="darkmode"></button>
-        
     </header>
 
         <div class="dropdown">
@@ -31,38 +29,41 @@
               <button onclick="filterDish(null)">No filter</button>
             </div>
           </div> 
-    </nav>
 
+
+    <!-- Panier -->
     <div class="panier">
         <ion-icon name="cart"></ion-icon>
         prix total : 54$
     </div>
 
+    <!-- Menu -->
     <main>
-
         <section>
-
             liste des plats
-
             <article class="container">
             </article>
         </section>
-
     </main>
 
+    <!-- Section Commentaire -->
     <fieldset>
+
         <legend>Votre avis compte énormement</legend>
-        <img src="images/thanks.gif" title="Thanks" width="400" height="300">
+        <img src="images/thanks.gif" title="Thanks">
         <form>
             <label for="comment">Avis du client:</label><br>
-            <textarea placeholder="Votre avis..."></textarea>
+            <textarea placeholder="Votre avis suivi par votre nom/pseudo..."></textarea>
 
         </form>
-        <input type="mail" placeholder="Votre email...">
-        <button>Envoyer</button> <br>
+
+        <button id="button">Envoyer</button>
+
     </fieldset>
-    
+
+    <!-- Footer -->
     <footer>
+        <!-- Lien reseaux -->
         <nav>
             <a href="https://facebook.com/test" target="_blank">
                 <ion-icon name="logo-facebook"></ion-icon>
@@ -75,6 +76,7 @@
             </a>
         </nav>
 
+        <!-- Note restau -->
         <div>
             <ion-icon name="star"></ion-icon>
             <ion-icon name="star"></ion-icon>
@@ -83,14 +85,15 @@
             <ion-icon name="star"></ion-icon>
         </div>
 
+        <!-- Adresse -->
         <div>
             <p>Adresse :</p>
             <p>Cantersteen 10</p>
             <p>1000 Bruxelles </p>
-
         </div>
     </footer>
 
+    <!-- script -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="js/script.js"></script>
