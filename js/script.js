@@ -117,3 +117,10 @@ function myFunction() {
       }
     }
   } 
+
+/* Dark mode */
+
+  function darktheme() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+ }
