@@ -17,3 +17,12 @@ Création d'une dark kitchen :
 ## Perf lighthouse
 
 ![Perf](images/perf.png)
+
+## to do list
+-panier fonctionel
+-arranger le css
+-créer un bouton "ajouter au panier" a l'arriere de la carte
+-créer un tri fonctionel
+-update le js par la suite
+-ajouter des plats/boissons
+-responsive design
