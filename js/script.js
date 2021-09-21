@@ -32,6 +32,7 @@ const pastadore = [{
 }
 ];
 
+/* Create Menu */
 function createCard(dishes) {
   let cards = document.createElement("div")
   cards.className = "card"
@@ -96,8 +97,7 @@ for (let dishes of pastadore){
   createCard(dishes)
 }
 
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+/* List button */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
