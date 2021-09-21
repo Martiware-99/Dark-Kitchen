@@ -97,12 +97,12 @@ function getComment() {
 
 function cmntDisplayZone() {
 
-    let displayZone = document.createElement('section');
-    let title = document.createElement('h1');
     let para = document.createElement('p');
-    title.innerText = 'Customers comments';
-    para.innerText = getComment();
-    displayZone.appendChild(title);
+    let ul = document.createElement('ul');
+    let li = document.createElement('li');
+    li.innerText = getComment();
+    ul.appendChild(li);
+    para.appendChild(ul);
     displayZone.appendChild(para);
     document.body.appendChild(displayZone);
 
@@ -112,6 +112,7 @@ function display() {
     let button = document.querySelector('#button');
 
     button.addEventListener('click', cmntDisplayZone);
-
 }
+
+commentTitle();
 display();
