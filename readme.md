@@ -26,4 +26,5 @@ Création d'une dark kitchen :
 5. update le js par la suite
 6. ajouter des plats/boissons
 7. responsive design
+8. liste d ingredients dynamique
 
