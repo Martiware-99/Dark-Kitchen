@@ -1,126 +1,165 @@
 const pastadore = [{
-  menu: 'pasta bolognese',
-  ingredients: ['penne, spaghetti ou tagliatelle', 'sauce tomate', 'viande hâchée'],
-  vegan: false,
-  description: 'Du vrai fait maison',
-  prix: 6.50,
-  image: "https://www.allesoveritaliaanseten.nl/wp-content/uploads/2015/03/Pasta-Bolognese.jpg",
-},
-{
-  menu: 'carbonara',
-  ingredients: ['penne, spaghetti ou tagliatelle', 'jambon', 'crème fraîche'],
-  vegan: false,
-  description: 'Maestro des pâtes',
-  prix: 5.50,
-  image: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg",
-},
-{
-  menu: 'carbonara vegan',
-  ingredients: ['penne, spaghetti ou tagliatelle', 'brocoli', 'crème fraîche'],
-  vegan: true,
-  description: 'International healthy pasta',
-  prix: 8.00,
-  image: "https://choosingchia.com/jessh-jessh/uploads/2020/09/vegan-carbonara-4.jpg",
-},
-{
-  menu: 'tagliatelle tricolore',
-  ingredients: ['tagliatelle', 'courgette', 'basilic'],
-  vegan: true,
-  description: 'Idéal pour le soir',
-  prix: 8.00,
-  image: "https://images.eatsmarter.com/sites/default/files/styles/576x432/public/tricolore-tagliatelle-with-prawns-505201.jpg",
-}
+        menu: 'pasta bolognese',
+        ingredients: ['penne, spaghetti ou tagliatelle', 'sauce tomate', 'viande hâchée'],
+        vegan: false,
+        description: 'Du vrai fait maison',
+        prix: 6.50,
+        image: "https://www.allesoveritaliaanseten.nl/wp-content/uploads/2015/03/Pasta-Bolognese.jpg",
+    },
+    {
+        menu: 'carbonara',
+        ingredients: ['penne, spaghetti ou tagliatelle', 'jambon', 'crème fraîche'],
+        vegan: false,
+        description: 'Maestro des pâtes',
+        prix: 5.50,
+        image: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg",
+    },
+    {
+        menu: 'carbonara vegan',
+        ingredients: ['penne, spaghetti ou tagliatelle', 'brocoli', 'crème fraîche'],
+        vegan: true,
+        description: 'International healthy pasta',
+        prix: 8.00,
+        image: "https://choosingchia.com/jessh-jessh/uploads/2020/09/vegan-carbonara-4.jpg",
+    },
+    {
+        menu: 'tagliatelle tricolore',
+        ingredients: ['tagliatelle', 'courgette', 'basilic'],
+        vegan: true,
+        description: 'Idéal pour le soir',
+        prix: 8.00,
+        image: "https://images.eatsmarter.com/sites/default/files/styles/576x432/public/tricolore-tagliatelle-with-prawns-505201.jpg",
+    }
 ];
 
 /* Create Menu */
 function createCard(dishes) {
-  let cards = document.createElement("div")
-  cards.className = "card"
-  document.querySelector(".container").appendChild(cards)
-  
-  let front = document.createElement("div")
-  front.className = "front"
-  cards.appendChild(front)
-  
-  let back = document.createElement("div")
-  back.className = "back"
-  cards.appendChild(back)
-  
-  
-  let footer = document.createElement("footer")
-  front.appendChild(footer)
+    let cards = document.createElement("div")
+    cards.className = "card"
+    document.querySelector(".container").appendChild(cards)
 
-  let plat = document.createElement("p")
-  footer.appendChild(plat)
-  plat.innerText = dishes.menu
+    let front = document.createElement("div")
+    front.className = "front"
+    cards.appendChild(front)
 
-  let price = document.createElement("p")
-  footer.appendChild(price)
-  price.className = "prix"
-  price.innerText = dishes.prix
+    let back = document.createElement("div")
+    back.className = "back"
+    cards.appendChild(back)
 
 
-  let platBack = document.createElement("h3")
-  back.appendChild(platBack)
-  platBack.innerText = dishes.menu
+    let footer = document.createElement("footer")
+    front.appendChild(footer)
 
-  let description = document.createElement("p")
-  back.appendChild(description)
-  description.innerText = dishes.description
+    let plat = document.createElement("p")
+    footer.appendChild(plat)
+    plat.innerText = dishes.menu
 
-  let ingrédients = document.createElement("h4")
-  back.appendChild(ingrédients)
-  ingrédients.innerText = "liste d'ingrédient"
-
-  let liste = document.createElement("ul")
-  back.appendChild(liste)
-
-  let listItem1 = document.createElement("li")
-  liste.appendChild(listItem1)
-  listItem1.innerText  = dishes.ingredients[0]
-
-  let listItem2 = document.createElement("li")
-  liste.appendChild(listItem2)
-  listItem2.innerText  = dishes.ingredients[1]
-
-  let listItem3 = document.createElement("li")
-  liste.appendChild(listItem3)
-  listItem3.innerText  = dishes.ingredients[2]
+    let price = document.createElement("p")
+    footer.appendChild(price)
+    price.className = "prix"
+    price.innerText = dishes.prix
 
 
-  front.style.backgroundImage = "url('"+ dishes.image +"')";
+    let platBack = document.createElement("h3")
+    back.appendChild(platBack)
+    platBack.innerText = dishes.menu
+
+    let description = document.createElement("p")
+    back.appendChild(description)
+    description.innerText = dishes.description
+
+    let ingrédients = document.createElement("h4")
+    back.appendChild(ingrédients)
+    ingrédients.innerText = "liste d'ingrédient"
+
+    let liste = document.createElement("ul")
+    back.appendChild(liste)
+
+    let listItem1 = document.createElement("li")
+    liste.appendChild(listItem1)
+    listItem1.innerText = dishes.ingredients[0]
+
+    let listItem2 = document.createElement("li")
+    liste.appendChild(listItem2)
+    listItem2.innerText = dishes.ingredients[1]
+
+    let listItem3 = document.createElement("li")
+    liste.appendChild(listItem3)
+    listItem3.innerText = dishes.ingredients[2]
+
+
+    front.style.backgroundImage = "url('" + dishes.image + "')";
 
 }
 
-for (let dishes of pastadore){
-  console.log(dishes);
-  createCard(dishes)
+for (let dishes of pastadore) {
+    console.log(dishes);
+    createCard(dishes)
 }
 
 /* List button */
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  function filterFunction() {
+}
+
+function filterFunction() {
     var input, filter, ul, li, a, i;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
     div = document.getElementById("myDropdown");
     a = div.getElementsByTagName("a");
     for (i = 0; i < a.length; i++) {
-      txtValue = a[i].textContent || a[i].innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        a[i].style.display = "";
-      } else {
-        a[i].style.display = "none";
-      }
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
     }
-  } 
+}
 
 /* Dark mode */
 
-  function darktheme() {
+function darktheme() {
     var element = document.body;
     element.classList.toggle("dark-mode");
- }
+}
+
+
+/* Comment zone */
+let displayZone = document.createElement('section');
+let title = document.createElement('h1');
+
+function commentTitle() {
+    title.innerText = 'Customers comments';
+    displayZone.appendChild(title);
+}
+
+function getComment() {
+
+    let commentZone = document.querySelector('textarea');
+    let comment = commentZone.value;
+    return comment;
+}
+
+function cmntDisplayZone() {
+
+    let para = document.createElement('p');
+    let ul = document.createElement('ul');
+    let li = document.createElement('li');
+    li.innerText = getComment();
+    ul.appendChild(li);
+    para.appendChild(ul);
+    displayZone.appendChild(para);
+    document.body.appendChild(displayZone);
+
+}
+
+function display() {
+    let button = document.querySelector('#button');
+
+    button.addEventListener('click', cmntDisplayZone);
+}
+
+commentTitle();
+display();

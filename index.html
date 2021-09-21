@@ -15,20 +15,20 @@
     <header>
         <img src="images/logo_small.png" alt="logo">
         <h1>Pastadore</h1>
-        <button onclick="darktheme()"><img src="images/darkmode.png" alt="darkmode"></button>     
+        <button onclick="darktheme()"><img src="images/darkmode.png" alt="darkmode"></button>
     </header>
 
     <!-- Tri list -->
-        <nav class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Tri</button>
-            <div id="myDropdown" class="dropdown-content">
-              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-              <a href="#pizza">Pizza</a>
-              <a href="#pasta">Pasta</a>
-              <a href="#vegan">Vegan</a>
-              <a href="#drink">Drink</a>
-            </div>
-        </nav> 
+    <nav class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Tri</button>
+        <div id="myDropdown" class="dropdown-content">
+            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            <a href="#pizza">Pizza</a>
+            <a href="#pasta">Pasta</a>
+            <a href="#vegan">Vegan</a>
+            <a href="#drink">Drink</a>
+        </div>
+    </nav>
 
     <!-- Panier -->
     <div class="panier">
@@ -47,17 +47,19 @@
 
     <!-- Section Commentaire -->
     <fieldset>
+
         <legend>Votre avis compte énormement</legend>
-        <img src="images/thanks.gif" title="Thanks" width="400" height="300">
+        <img src="images/thanks.gif" title="Thanks">
         <form>
             <label for="comment">Avis du client:</label><br>
-            <textarea placeholder="Votre avis..."></textarea>
+            <textarea placeholder="Votre avis suivi par votre nom/pseudo..."></textarea>
 
         </form>
-        <input type="mail" placeholder="Votre email...">
-        <button>Envoyer</button> <br>
+
+        <button id="button">Envoyer</button>
+
     </fieldset>
-    
+
     <!-- Footer -->
     <footer>
         <!-- Lien reseaux -->
@@ -95,4 +97,5 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="js/script.js"></script>
 </body>
+
 </html>
