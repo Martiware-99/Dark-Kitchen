@@ -194,3 +194,27 @@ ul {
 .show {
     display: block;
 }
+
+@media (max-width: 450px) {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(200px, 1fr));
+      gap: 1rem 1rem;
+      grid-auto-rows: minmax(1fr, 1fr);
+      grid-auto-flow: row;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+  }
+  
+  @media (min-width: 450px) and (max-width:650px) {
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      gap: 1rem 1rem;
+      grid-auto-rows: minmax(1fr, 1fr);
+      grid-auto-flow: row;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+  }

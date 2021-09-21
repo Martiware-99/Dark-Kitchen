@@ -25,27 +25,19 @@ const pastadore = [{
   ingredients: ['penne, spaghetti ou tagliatelle', 'brocoli', 'crème fraîche'],
   vegan: true,
   pizza: false,
-  pasta: false,
+  pasta: true,
   drink:false,
   description: 'International healthy pasta',
   prix: 8.00,
   image: "https://choosingchia.com/jessh-jessh/uploads/2020/09/vegan-carbonara-4.jpg",
 },
 {
-  menu: 'tagliatelle tricolore',
-  ingredients: ['tagliatelle', 'courgette', 'basilic'],
-  vegan: false,
-  pizza: false,
-  pasta: true,
-  drink:false,
-  description: 'Idéal pour le soir',
-  prix: 8.00,
-  image: "https://images.eatsmarter.com/sites/default/files/styles/576x432/public/tricolore-tagliatelle-with-prawns-505201.jpg",
-},
-{
         menu: 'tagliatelle tricolore',
         ingredients: ['tagliatelle', 'courgette', 'basilic'],
         vegan: true,
+        pizza: false,
+        pasta: true,
+        drink:false,
         description: 'Idéal pour le soir',
         prix: 8.00,
         image: "https://images.eatsmarter.com/sites/default/files/styles/576x432/public/tricolore-tagliatelle-with-prawns-505201.jpg",
@@ -57,6 +49,9 @@ const pastadore = [{
         description: 'Podere',
         image: 'https://www.demand.eu/images/productimages/big/italiaans-wijnpakketje-a.jpg',
         vegan: false,
+        pizza: false,
+        pasta: false,
+        drink: true,
     },
     {
         menu: 'vin blanc',
@@ -65,6 +60,9 @@ const pastadore = [{
         description: 'Orviete Classico',
         image: 'https://www.vins-italiens.fr/636-large_default2/orvieto-doc-classico.jpg',
         vegan: false,
+        pizza: false,
+        pasta: false,
+        drink: true,
     },
     {
         menu: 'vin rosé',
@@ -73,6 +71,9 @@ const pastadore = [{
         description: 'Rosatelo',
         image: 'https://www.vins-italiens.fr/829-large_default2/rosatello-rosato.jpg',
         vegan: false,
+        pizza: false,
+        pasta: false,
+        drink: true,
     },
     {
         menu: 'Cola',
@@ -81,6 +82,9 @@ const pastadore = [{
         description: 'Zéro sucre validée par Romelu Lukaku',
         image: 'https://pbs.twimg.com/media/EUcoHLqXgAApD2l.jpg',
         vegan: false,
+        pizza: false,
+        pasta: false,
+        drink: true,
     },
     {
         menu: 'Eau plate',
@@ -89,6 +93,9 @@ const pastadore = [{
         description: 'spa Reine',
         image: 'https://www.rob-brussels.be/media/catalog/product/cache/4674fdbecbe8e81d26c2d902fe2fbc48/b/e/b-ea-plcon-1015-b-ea-plcon-1015-image_1-230217_2412.jpg',
         vegan: false,
+        pizza: false,
+        pasta: false,
+        drink: true,
     },
     {
         menu: 'Eau pétillante',
@@ -97,12 +104,18 @@ const pastadore = [{
         description: 'spa Reine',
         image: 'https://shop.pure.organic/1721-medium_default/spa-reine-petillante-1l.jpg',
         vegan: false,
+        pizza: false,
+        pasta: false,
+        drink: true,
     },
     {
         menu: 'Margharita',
         ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'tomates'],
         description: 'juste un délice',
-        vegan: false,
+        vegan: true,
+        pizza: true,
+        pasta: false,
+        drink:false,
         prix: 15.00,
         image: 'https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2018.2F09.2F25.2F13d543a6-cdf7-400e-9c5a-b274a8f22e5e.2Ejpeg/748x372/quality/90/crop-from/center/pizza-margherita.jpeg',
     },
@@ -111,6 +124,9 @@ const pastadore = [{
         ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'poivrons', 'oignons', 'tranches de peperoni'],
         description: 'Préférée de tout le monde',
         vegan: false,
+        pizza: true,
+        pasta: false,
+        drink:false,
         prix: 15.00,
         image: 'https://img-3.journaldesfemmes.fr/J-Ghr27nHaONcrz46Fxq9HYsyTg=/750x500/smart/5f3ef94c1513478a954404a7b39eb177/recipe-jdf/10000901.jpg',
     },
@@ -119,6 +135,9 @@ const pastadore = [{
         ingredients: ['pâte à pizza', 'herbes de Provence', 'poivrons rouges', 'chorizo vegan', 'huile piquante'],
         description: 'Délicieuse',
         vegan: true,
+        pizza: true,
+        pasta: false,
+        drink:false,
         prix: 13.50,
         image: 'https://www.veganfreestyle.com/wp-content/uploads/2018/02/pizza-vegan.jpg',
     }
@@ -186,7 +205,7 @@ function createCard(dishes) {
 
 }
 
-
+// filter dishes
 
 function filterDish(filterToApply){
   let container = document.querySelector(".container");
