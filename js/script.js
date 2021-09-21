@@ -4,7 +4,7 @@ const pastadore = [{
   vegan: false,
   description: 'Du vrai fait maison',
   prix: 6.50,
-  image: "https://www.allesoveritaliaanseten.nl/wp-content/uploads/2015/03/Pasta-Bolognese.jpg",
+  image: "https://www.sprinklesandsprouts.com/wp-content/uploads/2019/04/Authentic-Spaghetti-Bolognese-SQ.jpg",
 },
 {
   menu: 'carbonara',
@@ -12,7 +12,7 @@ const pastadore = [{
   vegan: false,
   description: 'Maestro des pâtes',
   prix: 5.50,
-  image: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg",
+  image: "https://img.cuisineaz.com/610x610/2018/03/19/i137169-pates-aux-lardons-fumes-ricotta-et-parmesan.jpeg",
 },
 {
   menu: 'carbonara vegan',
@@ -20,7 +20,7 @@ const pastadore = [{
   vegan: true,
   description: 'International healthy pasta',
   prix: 8.00,
-  image: "https://choosingchia.com/jessh-jessh/uploads/2020/09/vegan-carbonara-4.jpg",
+  image: "https://www.foodette.fr/files/products/pasta-pates-tagliatelles-italie-creme-citron-brocoli-pavot.JPG",
 },
 {
   menu: 'tagliatelle tricolore',
@@ -28,11 +28,84 @@ const pastadore = [{
   vegan: true,
   description: 'Idéal pour le soir',
   prix: 8.00,
-  image: "https://images.eatsmarter.com/sites/default/files/styles/576x432/public/tricolore-tagliatelle-with-prawns-505201.jpg",
-}
+  image: "https://www.fr.weightwatchers.be/images/2060/dynamic/foodandrecipes/2013/14/BE-FR_7021692_600x600.jpg",
+},
+{
+  menu: 'Margharita',
+  ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'tomates'],
+  description: 'juste un délice',
+  vegan: false,
+  prix: 15.00,
+  image: 'https://www.regal.fr/sites/art-de-vivre/files/pizza-margherita_istock.jpg',
+},
+{
+  menu: 'Pepperoni',
+  ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'poivrons', 'oignons', 'tranches de peperoni'],
+  description: 'Préférée de tout le monde',
+  vegan: false,
+  prix: 15.00,
+  image: 'https://images.pexels.com/photos/4109078/pexels-photo-4109078.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+},
+{
+  menu: 'Vegan Spicy Pepperoni',
+  ingredients: ['pâte à pizza', 'herbes de Provence', 'poivrons rouges', 'chorizo vegan', 'huile piquante'],
+  description: '',
+  vegan: true,
+  prix: 13.50,
+  image: 'https://healthyalie.com/wp-content/uploads/2021/04/healthy_alie_pizza_vegan_3_ingredients_2697-684x1024.png',
+},
+{
+  menu: 'vin rouge',
+  ingredients: ['red grapes', 'ethanol'],
+  prix: 10.00,
+  description: 'Cioccolata di Montebello Appassimento',
+  image: 'https://www.sylvies.be/Uploads/Images/219/big/LOT00230423-F00112174.jpg',
+  vegan: false,
+},
+{
+  menu: 'vin blanc',
+  ingredients: ['white grapes', 'ethanol'],
+  prix: 10.00,
+  description: 'Lampiasi Grillo',
+  image: 'https://robbreport.com/wp-content/uploads/2020/04/lillie-1.jpg?w=1000',
+  vegan: false,
+},
+{
+  menu: 'vin rosé',
+  ingredients: ['black grapes', 'white grapes', 'ethanol'],
+  prix: 10.00,
+  description: 'Rosatelo',
+  image: 'https://cdn.vin.co/_clients_folder/perrin/perrin_ventoux_rose_2017_macro_jpg_20248_1024.jpg',
+  vegan: false,
+},
+{
+  menu: 'Coca',
+  ingredients: ['sparkling water', 'sirop', 'caramel'],
+  prix: 1.50,
+  description: 'Zéro sucre validée par Romelu Lukaku',
+  image: 'https://pbs.twimg.com/media/EUcoHLqXgAApD2l.jpg',
+  vegan: false,
+},
+{
+  menu: 'Eau plate',
+  ingredients: ['mineral water'],
+  prix: 1.00,
+  description: 'spa Reine',
+  image: 'https://www.rob-brussels.be/media/catalog/product/cache/4674fdbecbe8e81d26c2d902fe2fbc48/b/e/b-ea-plcon-1015-b-ea-plcon-1015-image_1-230217_2412.jpg',
+  vegan: false,
+},
+{
+  menu: 'Eau pétillante',
+  ingredients: ['co2', 'mineral water'],
+  prix: 1.00,
+  description: 'spa Reine',
+  image: 'https://shop.pure.organic/1721-medium_default/spa-reine-petillante-1l.jpg',
+  vegan: false,
+},
 ];
 
 /* Create Menu */
+
 function createCard(dishes) {
   let cards = document.createElement("article")
   cards.className = "card"
@@ -52,12 +125,13 @@ function createCard(dishes) {
 
   let plat = document.createElement("p")
   footer.appendChild(plat)
+  plat.className = "prix"
   plat.innerText = dishes.menu
 
   let price = document.createElement("p")
   footer.appendChild(price)
   price.className = "prix"
-  price.innerText = dishes.prix
+  price.innerText = "prix : " + dishes.prix + " €"
 
 
   let platBack = document.createElement("h3")
@@ -66,11 +140,11 @@ function createCard(dishes) {
 
   let description = document.createElement("p")
   back.appendChild(description)
-  description.innerText = dishes.description
+  description.innerText = "Description : " + dishes.description
 
   let ingrédients = document.createElement("h4")
   back.appendChild(ingrédients)
-  ingrédients.innerText = "liste d'ingrédient"
+  ingrédients.innerText = "Liste d'ingrédient :"
 
   let liste = document.createElement("ul")
   back.appendChild(liste)
@@ -97,8 +171,27 @@ for (let dishes of pastadore){
   createCard(dishes)
 }
 
-/* tri button */
+/* List button */
 
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("myDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+      } else {
+          a[i].style.display = "none";
+      }
+  }
+}
 
 /* Dark mode */
 
@@ -106,3 +199,42 @@ for (let dishes of pastadore){
     var element = document.body;
     element.classList.toggle("dark-mode");
  }
+
+ /* Comment zone */
+
+let displayZone = document.createElement('section');
+let title = document.createElement('h1');
+
+function commentTitle() {
+    title.innerText = 'Customers comments';
+    displayZone.appendChild(title);
+}
+
+function getComment() {
+
+    let commentZone = document.querySelector('textarea');
+    let comment = commentZone.value;
+    return comment;
+}
+
+function cmntDisplayZone() {
+
+    let para = document.createElement('p');
+    let ul = document.createElement('ul');
+    let li = document.createElement('li');
+    li.innerText = getComment();
+    ul.appendChild(li);
+    para.appendChild(ul);
+    displayZone.appendChild(para);
+    document.body.appendChild(displayZone);
+
+}
+
+function display() {
+    let button = document.querySelector('#button');
+
+    button.addEventListener('click', cmntDisplayZone);
+}
+
+commentTitle();
+display();

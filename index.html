@@ -19,14 +19,16 @@
     </header>
 
     <!-- Tri list -->
-    <div class="wrap">
-        <div class="search">
-           <input type="text" class="searchTerm" placeholder="Pizza, pasta, vegan dish or drink?">
-           <button type="submit" class="searchButton">
-            <ion-icon name="search"></ion-icon>
-          </button>
+    <nav class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Tri</button>
+        <div id="myDropdown" class="dropdown-content">
+            <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+            <a href="#pizza">Pizza</a>
+            <a href="#pasta">Pasta</a>
+            <a href="#vegan">Vegan</a>
+            <a href="#drink">Drink</a>
         </div>
-     </div>
+    </nav>
 
     <!-- Panier -->
     <div class="panier">
@@ -38,25 +40,19 @@
     <main>
         <h2 class="plat"> liste des plats </h2>
         <section class="container">
-                <h2> Pasta</h2>
-                <h2> Pizza </h2>
-                <h2> Vegan </h2>
-                <h2> Drink </h2>
-            </article>
+
         </section>
     </main>
 
     <!-- Section Commentaire -->
     <fieldset>
         <legend>Votre avis compte énormement</legend>
-        <img src="images/thanks.gif" title="Thanks" width="400" height="300">
+        <img src="images/thanks.gif" title="Thanks">
         <form>
             <label for="comment">Avis du client:</label><br>
-            <textarea placeholder="Votre avis..."></textarea>
-
+            <textarea placeholder="Votre avis suivi par votre nom/pseudo..."></textarea>
         </form>
-        <input type="mail" placeholder="Votre email...">
-        <button>Envoyer</button> <br>
+        <button id="button">Envoyer</button>
     </fieldset>
     
     <!-- Footer -->
