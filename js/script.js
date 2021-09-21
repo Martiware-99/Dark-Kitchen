@@ -41,6 +41,7 @@ const pastadore = [{
     {
         menu: 'drink',
         name: 'vin rouge',
+        ingredients: ['red grapes', 'ethanol'],
         prixVerre: 5.50,
         prixBouteille: 10.00,
         description: 'Cioccolata di Montebello Appassimento',
@@ -50,6 +51,7 @@ const pastadore = [{
     {
         menu: 'drink',
         name: 'vin blanc',
+        ingredients: ['white grapes', 'ethanol'],
         prixVerre: 5.50,
         prixBouteille: 10.00,
         description: 'Lampiasi Grillo',
@@ -59,6 +61,7 @@ const pastadore = [{
     {
         menu: 'drink',
         name: 'vin rosé',
+        ingredients: ['black grapes', 'white grapes', 'ethanol'],
         prixVerre: 5.50,
         prixBouteille: 10.00,
         description: 'Rosatelo',
@@ -68,6 +71,7 @@ const pastadore = [{
     {
         menu: 'drink',
         name: 'Cola',
+        ingredients: ['sparkling water', 'sirop', 'caramel'],
         prix: 1.50,
         description: 'Zéro sucre validée par Romelu Lukaku',
         image: 'https://pbs.twimg.com/media/EUcoHLqXgAApD2l.jpg',
@@ -76,6 +80,7 @@ const pastadore = [{
     {
         menu: 'drink',
         name: 'Eau plate',
+        ingredients: ['mineral water'],
         prix: 1.00,
         description: 'spa Reine',
         image: 'https://www.rob-brussels.be/media/catalog/product/cache/4674fdbecbe8e81d26c2d902fe2fbc48/b/e/b-ea-plcon-1015-b-ea-plcon-1015-image_1-230217_2412.jpg',
@@ -84,6 +89,7 @@ const pastadore = [{
     {
         menu: 'drink',
         name: 'Eau pétillante',
+        ingredients: ['co2', 'mineral water'],
         prix: 1.00,
         description: 'spa Reine',
         image: 'https://shop.pure.organic/1721-medium_default/spa-reine-petillante-1l.jpg',
