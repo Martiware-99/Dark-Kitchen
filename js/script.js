@@ -1,43 +1,43 @@
 const pastadore = [{
-  menu: 'pasta bolognese',
-  ingredients: ['penne, spaghetti ou tagliatelle', 'sauce tomate', 'viande hâchée'],
-  vegan: false,
-  pizza: false,
-  pasta: true,
-  drink:false,
-  description: 'Du vrai fait maison',
-  prix: 6.50,
-  image: "https://www.sprinklesandsprouts.com/wp-content/uploads/2019/04/Authentic-Spaghetti-Bolognese-SQ.jpg",
-},
-{
-  menu: 'carbonara',
-  ingredients: ['penne, spaghetti ou tagliatelle', 'jambon', 'crème fraîche'],
-  vegan: false,
-  pizza: false,
-  pasta: true,
-  drink:false,
-  description: 'Maestro des pâtes',
-  prix: 5.50,
-  image: "https://img.cuisineaz.com/610x610/2018/03/19/i137169-pates-aux-lardons-fumes-ricotta-et-parmesan.jpeg",
-},
-{
-  menu: 'carbonara vegan',
-  ingredients: ['penne, spaghetti ou tagliatelle', 'brocoli', 'crème fraîche'],
-  vegan: true,
-  pizza: false,
-  pasta: true,
-  drink:false,
-  description: 'International healthy pasta',
-  prix: 8.00,
-  image: "https://www.foodette.fr/files/products/pasta-pates-tagliatelles-italie-creme-citron-brocoli-pavot.JPG",
-},
-{
+        menu: 'pasta bolognese',
+        ingredients: ['penne, spaghetti ou tagliatelle', 'sauce tomate', 'viande hâchée'],
+        vegan: false,
+        pizza: false,
+        pasta: true,
+        drink: false,
+        description: 'Du vrai fait maison',
+        prix: 6.50,
+        image: "https://www.sprinklesandsprouts.com/wp-content/uploads/2019/04/Authentic-Spaghetti-Bolognese-SQ.jpg",
+    },
+    {
+        menu: 'carbonara',
+        ingredients: ['penne, spaghetti ou tagliatelle', 'jambon', 'crème fraîche'],
+        vegan: false,
+        pizza: false,
+        pasta: true,
+        drink: false,
+        description: 'Maestro des pâtes',
+        prix: 5.50,
+        image: "https://img.cuisineaz.com/610x610/2018/03/19/i137169-pates-aux-lardons-fumes-ricotta-et-parmesan.jpeg",
+    },
+    {
+        menu: 'carbonara vegan',
+        ingredients: ['penne, spaghetti ou tagliatelle', 'brocoli', 'crème fraîche'],
+        vegan: true,
+        pizza: false,
+        pasta: true,
+        drink: false,
+        description: 'International healthy pasta',
+        prix: 8.00,
+        image: "https://www.foodette.fr/files/products/pasta-pates-tagliatelles-italie-creme-citron-brocoli-pavot.JPG",
+    },
+    {
         menu: 'tagliatelle tricolore',
         ingredients: ['tagliatelle', 'courgette', 'basilic'],
         vegan: true,
         pizza: false,
         pasta: true,
-        drink:false,
+        drink: false,
         description: 'Idéal pour le soir',
         prix: 8.00,
         image: "https://images.eatsmarter.com/sites/default/files/styles/576x432/public/tricolore-tagliatelle-with-prawns-505201.jpg",
@@ -115,7 +115,7 @@ const pastadore = [{
         vegan: true,
         pizza: true,
         pasta: false,
-        drink:false,
+        drink: false,
         prix: 15.00,
         image: 'https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2018.2F09.2F25.2F13d543a6-cdf7-400e-9c5a-b274a8f22e5e.2Ejpeg/748x372/quality/90/crop-from/center/pizza-margherita.jpeg',
     },
@@ -126,7 +126,7 @@ const pastadore = [{
         vegan: false,
         pizza: true,
         pasta: false,
-        drink:false,
+        drink: false,
         prix: 15.00,
         image: 'https://img-3.journaldesfemmes.fr/J-Ghr27nHaONcrz46Fxq9HYsyTg=/750x500/smart/5f3ef94c1513478a954404a7b39eb177/recipe-jdf/10000901.jpg',
     },
@@ -137,100 +137,100 @@ const pastadore = [{
         vegan: true,
         pizza: true,
         pasta: false,
-        drink:false,
+        drink: false,
         prix: 13.50,
         image: 'https://www.veganfreestyle.com/wp-content/uploads/2018/02/pizza-vegan.jpg',
     },
-  ]
+]
 
 /* Create Menu */
 
 function createCard(dishes) {
-  let cards = document.createElement("article")
-  cards.className = "card"
-  document.querySelector(".container").appendChild(cards)
-  
-  let front = document.createElement("div")
-  front.className = "front"
-  cards.appendChild(front)
-  
-  let back = document.createElement("div")
-  back.className = "back"
-  cards.appendChild(back)
-  
-  
-  let footer = document.createElement("footer")
-  front.appendChild(footer)
+    let cards = document.createElement("article")
+    cards.className = "card"
+    document.querySelector(".container").appendChild(cards)
 
-  let plat = document.createElement("p")
-  footer.appendChild(plat)
-  plat.className = "prix"
-  plat.innerText = dishes.menu
+    let front = document.createElement("div")
+    front.className = "front"
+    cards.appendChild(front)
 
-  let price = document.createElement("p")
-  footer.appendChild(price)
-  price.className = "prix"
-  price.innerText = "prix : " + dishes.prix + " €"
+    let back = document.createElement("div")
+    back.className = "back"
+    cards.appendChild(back)
 
 
-  let platBack = document.createElement("h3")
-  back.appendChild(platBack)
-  platBack.innerText = dishes.menu
+    let footer = document.createElement("footer")
+    front.appendChild(footer)
 
-  let description = document.createElement("p")
-  back.appendChild(description)
-  description.innerText = "Description : " + dishes.description
+    let plat = document.createElement("p")
+    footer.appendChild(plat)
+    plat.className = "prix"
+    plat.innerText = dishes.menu
 
-  let ingrédients = document.createElement("h4")
-  back.appendChild(ingrédients)
-  ingrédients.innerText = "Liste d'ingrédient :"
-
-  let liste = document.createElement("ul")
-  back.appendChild(liste)
-
-  let listItem1 = document.createElement("li")
-  liste.appendChild(listItem1)
-  listItem1.innerText  = dishes.ingredients[0]
-
-  let listItem2 = document.createElement("li")
-  liste.appendChild(listItem2)
-  listItem2.innerText  = dishes.ingredients[1]
-
-  let listItem3 = document.createElement("li")
-  liste.appendChild(listItem3)
-  listItem3.innerText  = dishes.ingredients[2]
+    let price = document.createElement("p")
+    footer.appendChild(price)
+    price.className = "prix"
+    price.innerText = "prix : " + dishes.prix + " €"
 
 
-  front.style.backgroundImage = "url('"+ dishes.image +"')";
+    let platBack = document.createElement("h3")
+    back.appendChild(platBack)
+    platBack.innerText = dishes.menu
+
+    let description = document.createElement("p")
+    back.appendChild(description)
+    description.innerText = "Description : " + dishes.description
+
+    let ingrédients = document.createElement("h4")
+    back.appendChild(ingrédients)
+    ingrédients.innerText = "Liste d'ingrédient :"
+
+    let liste = document.createElement("ul")
+    back.appendChild(liste)
+
+    let listItem1 = document.createElement("li")
+    liste.appendChild(listItem1)
+    listItem1.innerText = dishes.ingredients[0]
+
+    let listItem2 = document.createElement("li")
+    liste.appendChild(listItem2)
+    listItem2.innerText = dishes.ingredients[1]
+
+    let listItem3 = document.createElement("li")
+    liste.appendChild(listItem3)
+    listItem3.innerText = dishes.ingredients[2]
+
+
+    front.style.backgroundImage = "url('" + dishes.image + "')";
 
 }
 
 // filter dishes
 
-function filterDish(filterToApply){
-  let container = document.querySelector(".container");
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
-  }
-  
-  for (let dishes of pastadore){
-  if (filterToApply === null){
-    createCard(dishes)
-  } else {
-    if ((filterToApply === "vegan") && (dishes.vegan === true)){
-      createCard(dishes)
+function filterDish(filterToApply) {
+    let container = document.querySelector(".container");
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
     }
-    if ((filterToApply === "pizza") && (dishes.pizza === true)){
-      createCard(dishes)
+
+    for (let dishes of pastadore) {
+        if (filterToApply === null) {
+            createCard(dishes)
+        } else {
+            if ((filterToApply === "vegan") && (dishes.vegan === true)) {
+                createCard(dishes)
+            }
+            if ((filterToApply === "pizza") && (dishes.pizza === true)) {
+                createCard(dishes)
+            }
+            if ((filterToApply === "pasta") && (dishes.pasta === true)) {
+                createCard(dishes)
+            }
+            if ((filterToApply === "drink") && (dishes.drink === true)) {
+                createCard(dishes)
+            }
+        }
     }
-    if ((filterToApply === "pasta") && (dishes.pasta === true)){
-      createCard(dishes)
-    }
-    if ((filterToApply === "drink") && (dishes.drink === true)){
-      createCard(dishes)
-    }
-  }
-}
 }
 
 filterDish(null)
@@ -262,23 +262,33 @@ function filterFunction() {
 function darktheme() {
     var element = document.body;
     element.classList.toggle("dark-mode");
- }
+}
 
 /* Comment zone */
 
-let displayZone = document.createElement('section');
+let displayZone = document.querySelector('.commentZone');
+displayZone.classList.add('zone');
 let title = document.createElement('h1');
 
-function commentTitle() {
-    title.innerText = 'Customers comments';
-    displayZone.appendChild(title);
-}
+
 
 function getComment() {
 
-    let commentZone = document.querySelector('textarea');
-    let comment = commentZone.value;
+    let comment = document.createTextNode('');
+    let nameVal = document.querySelector('#name').value;
+    let dateVal = document.querySelector('#date').value;
+    let commentContent = document.querySelector('#comText').value;
+
+    let input = [{
+        name: nameVal,
+        Date: dateVal,
+        commentText: commentContent,
+    }];
+    for (let elt of input) {
+        comment.appendData(elt.commentText + " " + " by " + elt.name + ", " + elt.Date);
+    }
     return comment;
+
 }
 
 function cmntDisplayZone() {
@@ -286,19 +296,19 @@ function cmntDisplayZone() {
     let para = document.createElement('p');
     let ul = document.createElement('ul');
     let li = document.createElement('li');
-    li.innerText = getComment();
+    li = getComment();
     ul.appendChild(li);
     para.appendChild(ul);
-    displayZone.appendChild(para);
+    displayZone.appendChild(ul);
     document.body.appendChild(displayZone);
+    displayZone.style.fontStyle = 'italic';
+    displayZone.style.color = 'darkblue';
 
 }
 
 function display() {
-    let button = document.querySelector('#button');
 
+    let button = document.querySelector('#button');
     button.addEventListener('click', cmntDisplayZone);
 }
-
-commentTitle();
 display();

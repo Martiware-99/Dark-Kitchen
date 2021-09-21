@@ -6,8 +6,9 @@
 }
 
 .dark {
-  border-radius: 50%;
+    border-radius: 50%;
 }
+
 /* Header / Body / Footer */
 
 header {
@@ -40,18 +41,18 @@ body {
     background: linear-gradient(360deg, hsla(155, 95%, 23%, 1) 0%, hsla(0, 0%, 100%, 1) 33%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 100%, 1) 66%, hsla(0, 100%, 50%, 1) 100%);
     background: -moz-linear-gradient(360deg, hsla(155, 95%, 23%, 1) 0%, hsla(0, 0%, 100%, 1) 33%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 100%, 1) 66%, hsla(0, 100%, 50%, 1) 100%);
     background: -webkit-linear-gradient(360deg, hsla(155, 95%, 23%, 1) 0%, hsla(0, 0%, 100%, 1) 33%, hsla(0, 0%, 100%, 1) 50%, hsla(0, 0%, 100%, 1) 66%, hsla(0, 100%, 50%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#037143", endColorstr="#FFFFFF", GradientType=1 );
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#037143", endColorstr="#FFFFFF", GradientType=1);
     padding: 0 3%;
 }
 
-/* Titre */ 
+/* Titre */
 
 h2 {
-  text-align: center;
-  color: rgb(146, 60, 34);
+    text-align: center;
+    color: rgb(146, 60, 34);
 }
 
-/*  header / logo / darkmode */ 
+/*  header / logo / darkmode */
 
 img {
     width: 50px;
@@ -79,10 +80,10 @@ img {
     box-sizing: border-box;
     padding: 0 15%;
     font-style: italic;
-    font-weight:bold;
+    font-weight: bold;
     font-size: 20px;
-  }
-  
+}
+
 
 
 .card {
@@ -106,7 +107,7 @@ img {
     align-items: flex-end;
     justify-content: space-between;
     color: rgb(146, 60, 34);
-    text-shadow:1px 1px 2px white ;
+    text-shadow: 1px 1px 2px white;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -123,7 +124,8 @@ img {
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
-    color: rgb(146, 60, 34) ;;
+    color: rgb(146, 60, 34);
+    ;
     justify-content: center;
 }
 
@@ -146,21 +148,35 @@ img {
 }
 
 ul {
-  text-align: left;
-  margin-left: 50px;
+    text-align: left;
+    margin-left: 50px;
 }
 
 /* Comment section */
 
 fieldset {
-  border-radius: 10px;
-  background-color: whitesmoke;
-  width: 20%;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    width: 20%;
+    padding-bottom: 1%;
 }
 
 fieldset img {
-  width: 100%;
-  height: 10%;
+    width: 100%;
+    height: 40%;
+}
+
+.commentZone {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#click {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 /* Tri bouton */
@@ -214,7 +230,7 @@ fieldset img {
 }
 
 /* lien dans le dropdown */
-.dropdown-content button{
+.dropdown-content button {
     color: black;
     padding: 12px 16px;
     text-decoration: none;
@@ -234,48 +250,48 @@ fieldset img {
 /* Etoile */
 
 .star {
-  color: rgb(185, 173, 0);
-  padding-left: 3%;
+    color: rgb(185, 173, 0);
+    padding-left: 3%;
 }
 
 
 /* Lien reseaux */
 
 .reseaux {
-  color: rgb(146, 60, 34);
-  padding-left: 4%;
+    color: rgb(146, 60, 34);
+    padding-left: 4%;
 }
 
 .reseaux:hover {
-  color: red;
+    color: red;
 }
 
 /* Adresse */
 
 .adress {
-  color: white;
+    color: white;
 }
 
 @media (max-width: 450px) {
     .container {
-      display: grid;
-      grid-template-columns: repeat(1, minmax(200px, 1fr));
-      gap: 1rem 1rem;
-      grid-auto-rows: minmax(1fr, 1fr);
-      grid-auto-flow: row;
-      padding: 1rem;
-      box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(1, minmax(200px, 1fr));
+        gap: 1rem 1rem;
+        grid-auto-rows: minmax(1fr, 1fr);
+        grid-auto-flow: row;
+        padding: 1rem;
+        box-sizing: border-box;
     }
-  }
-  
-  @media (min-width: 450px) and (max-width:650px) {
+}
+
+@media (min-width: 450px) and (max-width:650px) {
     .container {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(200px, 1fr));
-      gap: 1rem 1rem;
-      grid-auto-rows: minmax(1fr, 1fr);
-      grid-auto-flow: row;
-      padding: 1rem;
-      box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        gap: 1rem 1rem;
+        grid-auto-rows: minmax(1fr, 1fr);
+        grid-auto-flow: row;
+        padding: 1rem;
+        box-sizing: border-box;
     }
-  }
+}
