@@ -22,9 +22,9 @@ Création d'une dark kitchen :
 1. panier fonctionel
 2. arranger le css
 3. créer un bouton "ajouter au panier" a l'arriere de la carte
-4. créer un tri fonctionel
-5. update le js par la suite
-6. ajouter des plats/boissons
-7. responsive design
-8. liste d ingredients dynamique
+4. ~~créer un tri fonctionel~~
+6. ~~update le js par la suite~~
+7. ~~ajouter des plats/boissons~~
+8. responsive design
+9. liste d ingredients dynamique
 

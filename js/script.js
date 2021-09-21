@@ -7,7 +7,7 @@ const pastadore = [{
   drink:false,
   description: 'Du vrai fait maison',
   prix: 6.50,
-  image: "https://www.allesoveritaliaanseten.nl/wp-content/uploads/2015/03/Pasta-Bolognese.jpg",
+  image: "https://www.sprinklesandsprouts.com/wp-content/uploads/2019/04/Authentic-Spaghetti-Bolognese-SQ.jpg",
 },
 {
   menu: 'carbonara',
@@ -18,7 +18,7 @@ const pastadore = [{
   drink:false,
   description: 'Maestro des pâtes',
   prix: 5.50,
-  image: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg",
+  image: "https://img.cuisineaz.com/610x610/2018/03/19/i137169-pates-aux-lardons-fumes-ricotta-et-parmesan.jpeg",
 },
 {
   menu: 'carbonara vegan',
@@ -29,7 +29,7 @@ const pastadore = [{
   drink:false,
   description: 'International healthy pasta',
   prix: 8.00,
-  image: "https://choosingchia.com/jessh-jessh/uploads/2020/09/vegan-carbonara-4.jpg",
+  image: "https://www.foodette.fr/files/products/pasta-pates-tagliatelles-italie-creme-citron-brocoli-pavot.JPG",
 },
 {
         menu: 'tagliatelle tricolore',
@@ -140,14 +140,13 @@ const pastadore = [{
         drink:false,
         prix: 13.50,
         image: 'https://www.veganfreestyle.com/wp-content/uploads/2018/02/pizza-vegan.jpg',
-    }
-];
+    },
+  ]
 
-
-// create menu
+/* Create Menu */
 
 function createCard(dishes) {
-  let cards = document.createElement("div")
+  let cards = document.createElement("article")
   cards.className = "card"
   document.querySelector(".container").appendChild(cards)
   
@@ -165,12 +164,13 @@ function createCard(dishes) {
 
   let plat = document.createElement("p")
   footer.appendChild(plat)
+  plat.className = "prix"
   plat.innerText = dishes.menu
 
   let price = document.createElement("p")
   footer.appendChild(price)
   price.className = "prix"
-  price.innerText = dishes.prix
+  price.innerText = "prix : " + dishes.prix + " €"
 
 
   let platBack = document.createElement("h3")
@@ -179,11 +179,11 @@ function createCard(dishes) {
 
   let description = document.createElement("p")
   back.appendChild(description)
-  description.innerText = dishes.description
+  description.innerText = "Description : " + dishes.description
 
   let ingrédients = document.createElement("h4")
   back.appendChild(ingrédients)
-  ingrédients.innerText = "liste d'ingrédient"
+  ingrédients.innerText = "Liste d'ingrédient :"
 
   let liste = document.createElement("ul")
   back.appendChild(liste)
@@ -236,6 +236,7 @@ function filterDish(filterToApply){
 filterDish(null)
 
 /* List button */
+
 function myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -261,10 +262,10 @@ function filterFunction() {
 function darktheme() {
     var element = document.body;
     element.classList.toggle("dark-mode");
-}
-
+ }
 
 /* Comment zone */
+
 let displayZone = document.createElement('section');
 let title = document.createElement('h1');
 
