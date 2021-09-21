@@ -15,20 +15,18 @@
     <header>
         <img src="images/logo_small.png" alt="logo">
         <h1>Pastadore</h1>
-        <button onclick="darktheme()"><img src="images/darkmode.png" alt="darkmode"></button>     
+        <button onclick="darktheme()" class="dark"><img src="images/darkmode.png" title="Activer/désactiver mode sombre" alt="darkmode" class="dark"></button>     
     </header>
 
     <!-- Tri list -->
-        <nav class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Tri</button>
-            <div id="myDropdown" class="dropdown-content">
-              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-              <a href="#pizza">Pizza</a>
-              <a href="#pasta">Pasta</a>
-              <a href="#vegan">Vegan</a>
-              <a href="#drink">Drink</a>
-            </div>
-        </nav> 
+    <div class="wrap">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="Pizza, pasta, vegan dish or drink?">
+           <button type="submit" class="searchButton">
+            <ion-icon name="search"></ion-icon>
+          </button>
+        </div>
+     </div>
 
     <!-- Panier -->
     <div class="panier">
@@ -38,9 +36,12 @@
 
     <!-- Menu -->
     <main>
-        <section>
-            liste des plats
-            <article class="container">
+        <h2 class="plat"> liste des plats </h2>
+        <section class="container">
+                <h2> Pasta</h2>
+                <h2> Pizza </h2>
+                <h2> Vegan </h2>
+                <h2> Drink </h2>
             </article>
         </section>
     </main>
@@ -59,31 +60,27 @@
     </fieldset>
     
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <!-- Lien reseaux -->
         <nav>
-            <a href="https://facebook.com/test" target="_blank">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-            <a href="https://twitter.com/test" target="_blank">
-                <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-            <a href="https://instagram.com/test" target="_blank">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a>
+            <p>Official social account :</p>
+            <a href="https://facebook.com/test" target="_blank"class="reseaux"><ion-icon name="logo-facebook" size="large"></ion-icon></a>
+            <a href="https://twitter.com/test" target="_blank"class="reseaux"><ion-icon name="logo-twitter" size="large"></ion-icon></a>
+            <a href="https://instagram.com/test" target="_blank"class="reseaux"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
         </nav>
 
         <!-- Note restau -->
         <div>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
-            <ion-icon name="star"></ion-icon>
+            <p class="trust">Trustpilot reviews</p>
+            <ion-icon name="star" class="star"></ion-icon>
+            <ion-icon name="star" class="star"></ion-icon>
+            <ion-icon name="star" class="star"></ion-icon>
+            <ion-icon name="star" class="star"></ion-icon>
+            <ion-icon name="star" class="star"></ion-icon>
         </div>
 
         <!-- Adresse -->
-        <div>
+        <div class="adress">
             <p>Adresse :</p>
             <p>Cantersteen 10</p>
             <p>1000 Bruxelles </p>

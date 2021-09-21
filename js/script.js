@@ -34,7 +34,7 @@ const pastadore = [{
 
 /* Create Menu */
 function createCard(dishes) {
-  let cards = document.createElement("div")
+  let cards = document.createElement("article")
   cards.className = "card"
   document.querySelector(".container").appendChild(cards)
   
@@ -97,26 +97,8 @@ for (let dishes of pastadore){
   createCard(dishes)
 }
 
-/* List button */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  function filterFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown");
-    a = div.getElementsByTagName("a");
-    for (i = 0; i < a.length; i++) {
-      txtValue = a[i].textContent || a[i].innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        a[i].style.display = "";
-      } else {
-        a[i].style.display = "none";
-      }
-    }
-  } 
+/* tri button */
+
 
 /* Dark mode */
 
