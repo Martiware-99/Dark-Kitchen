@@ -2,6 +2,9 @@ const pastadore = [{
   menu: 'pasta bolognese',
   ingredients: ['penne, spaghetti ou tagliatelle', 'sauce tomate', 'viande hâchée'],
   vegan: false,
+  pizza: false,
+  pasta: true,
+  drink:false,
   description: 'Du vrai fait maison',
   prix: 6.50,
   image: "https://www.sprinklesandsprouts.com/wp-content/uploads/2019/04/Authentic-Spaghetti-Bolognese-SQ.jpg",
@@ -10,6 +13,9 @@ const pastadore = [{
   menu: 'carbonara',
   ingredients: ['penne, spaghetti ou tagliatelle', 'jambon', 'crème fraîche'],
   vegan: false,
+  pizza: false,
+  pasta: true,
+  drink:false,
   description: 'Maestro des pâtes',
   prix: 5.50,
   image: "https://img.cuisineaz.com/610x610/2018/03/19/i137169-pates-aux-lardons-fumes-ricotta-et-parmesan.jpeg",
@@ -18,6 +24,9 @@ const pastadore = [{
   menu: 'carbonara vegan',
   ingredients: ['penne, spaghetti ou tagliatelle', 'brocoli', 'crème fraîche'],
   vegan: true,
+  pizza: false,
+  pasta: false,
+  drink:false,
   description: 'International healthy pasta',
   prix: 8.00,
   image: "https://www.foodette.fr/files/products/pasta-pates-tagliatelles-italie-creme-citron-brocoli-pavot.JPG",
@@ -25,7 +34,10 @@ const pastadore = [{
 {
   menu: 'tagliatelle tricolore',
   ingredients: ['tagliatelle', 'courgette', 'basilic'],
-  vegan: true,
+  vegan: false,
+  pizza: false,
+  pasta: true,
+  drink:false,
   description: 'Idéal pour le soir',
   prix: 8.00,
   image: "https://www.fr.weightwatchers.be/images/2060/dynamic/foodandrecipes/2013/14/BE-FR_7021692_600x600.jpg",
@@ -166,41 +178,66 @@ function createCard(dishes) {
 
 }
 
-for (let dishes of pastadore){
-  console.log(dishes);
-  createCard(dishes)
+
+
+function filterDish(filterToApply){
+  let container = document.querySelector(".container");
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+  
+  for (let dishes of pastadore){
+  if (filterToApply === null){
+    createCard(dishes)
+  } else {
+    if ((filterToApply === "vegan") && (dishes.vegan === true)){
+      createCard(dishes)
+    }
+    if ((filterToApply === "pizza") && (dishes.pizza === true)){
+      createCard(dishes)
+    }
+    if ((filterToApply === "pasta") && (dishes.pasta === true)){
+      createCard(dishes)
+    }
+    if ((filterToApply === "drink") && (dishes.drink === true)){
+      createCard(dishes)
+    }
+  }
 }
+}
+
+filterDish(null)
 
 /* List button */
 
 function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("myDropdown").classList.toggle("show");
 }
 
 function filterFunction() {
-  var input, filter, ul, li, a, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  div = document.getElementById("myDropdown");
-  a = div.getElementsByTagName("a");
-  for (i = 0; i < a.length; i++) {
-      txtValue = a[i].textContent || a[i].innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          a[i].style.display = "";
-      } else {
-          a[i].style.display = "none";
-      }
-  }
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+        txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a[i].style.display = "";
+        } else {
+            a[i].style.display = "none";
+        }
+    }
 }
 
 /* Dark mode */
 
-  function darktheme() {
+function darktheme() {
     var element = document.body;
     element.classList.toggle("dark-mode");
  }
 
- /* Comment zone */
+/* Comment zone */
 
 let displayZone = document.createElement('section');
 let title = document.createElement('h1');
