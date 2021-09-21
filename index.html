@@ -24,10 +24,11 @@
             <button onclick="myFunction()" class="dropbtn">Tri</button>
             <div id="myDropdown" class="dropdown-content">
               <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-              <a href="#pizza">Pizza</a>
-              <a href="#pasta">Pasta</a>
-              <a href="#vegan">Vegan</a>
-              <a href="#drink">Drink</a>
+              <button onclick="filterDish('pizza')">Pizza</button>
+              <button onclick="filterDish('pasta')">Pasta</button>
+              <button onclick="filterDish('vegan')">Vegan</button>
+              <button onclick="filterDish('drink')">Drink</button>
+              <button onclick="filterDish(null)">No filter</button>
             </div>
           </div> 
     </nav>

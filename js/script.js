@@ -2,6 +2,9 @@ const pastadore = [{
   menu: 'pasta bolognese',
   ingredients: ['penne, spaghetti ou tagliatelle', 'sauce tomate', 'viande hâchée'],
   vegan: false,
+  pizza: false,
+  pasta: true,
+  drink:false,
   description: 'Du vrai fait maison',
   prix: 6.50,
   image: "https://www.allesoveritaliaanseten.nl/wp-content/uploads/2015/03/Pasta-Bolognese.jpg",
@@ -10,6 +13,9 @@ const pastadore = [{
   menu: 'carbonara',
   ingredients: ['penne, spaghetti ou tagliatelle', 'jambon', 'crème fraîche'],
   vegan: false,
+  pizza: false,
+  pasta: true,
+  drink:false,
   description: 'Maestro des pâtes',
   prix: 5.50,
   image: "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/recipe-image-legacy-id-1001491_11-2e0fa5c.jpg",
@@ -18,6 +24,9 @@ const pastadore = [{
   menu: 'carbonara vegan',
   ingredients: ['penne, spaghetti ou tagliatelle', 'brocoli', 'crème fraîche'],
   vegan: true,
+  pizza: false,
+  pasta: false,
+  drink:false,
   description: 'International healthy pasta',
   prix: 8.00,
   image: "https://choosingchia.com/jessh-jessh/uploads/2020/09/vegan-carbonara-4.jpg",
@@ -25,15 +34,31 @@ const pastadore = [{
 {
   menu: 'tagliatelle tricolore',
   ingredients: ['tagliatelle', 'courgette', 'basilic'],
-  vegan: true,
+  vegan: false,
+  pizza: false,
+  pasta: true,
+  drink:false,
   description: 'Idéal pour le soir',
   prix: 8.00,
   image: "https://images.eatsmarter.com/sites/default/files/styles/576x432/public/tricolore-tagliatelle-with-prawns-505201.jpg",
 }
 ];
 
+
+
 function createCard(dishes) {
   let cards = document.createElement("div")
+  
+  if (dishes.vegan === true){
+    cards.id = "vegan"
+  } else if (dishes.pizza === true){
+    cards.id = "pizza"
+  } else if (dishes.pasta === true){
+    cards.id = "pasta";
+  } else if(dishes.drink === true){
+    cards.id = "drink"
+  } else {}
+  
   cards.className = "card"
   document.querySelector(".container").appendChild(cards)
   
@@ -91,9 +116,46 @@ function createCard(dishes) {
 
 }
 
-for (let dishes of pastadore){
-  console.log(dishes);
-  createCard(dishes)
+
+
+function filterDish(filterToApply){
+  let container = document.querySelector(".container");
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+  
+  for (let dishes of pastadore){
+  if (filterToApply === null){
+    createCard(dishes)
+  } else {
+    if ((filterToApply === "vegan") && (dishes.vegan === true)){
+      createCard(dishes)
+    }
+    if ((filterToApply === "pizza") && (dishes.pizza === true)){
+      createCard(dishes)
+    }
+    if ((filterToApply === "pasta") && (dishes.pasta === true)){
+      createCard(dishes)
+    }
+    if ((filterToApply === "drink") && (dishes.drink === true)){
+      createCard(dishes)
+    }
+  }
+}
+}
+
+filterDish(null)
+
+
+
+// function that'll hide dishes that do not apply to the filter
+function sortDishes() {
+  var x = document.querySelectorAll("#vegan");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
 
 /* When the user clicks on the button,
