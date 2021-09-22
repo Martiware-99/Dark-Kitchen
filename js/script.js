@@ -44,7 +44,7 @@ const pastadore = [{
 },
 {
   menu: 'Margharita',
-  ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'tomates'],
+  ingredients: ['mozarella', 'basilic', 'tomates'],
   description: 'juste un délice',
   vegan: false,
   pizza: true,
@@ -55,7 +55,7 @@ const pastadore = [{
 },
 {
   menu: 'Pepperoni',
-  ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'poivrons', 'oignons', 'tranches de peperoni'],
+  ingredients: ['mozarella', 'basilic', 'poivrons', 'oignons', 'tranches de peperoni'],
   description: 'Préférée de tout le monde',
   vegan: false,
   pizza: true,
@@ -66,7 +66,7 @@ const pastadore = [{
 },
 {
   menu: 'Vegan Spicy Pepperoni',
-  ingredients: ['pâte à pizza', 'herbes de Provence', 'poivrons rouges', 'chorizo vegan', 'huile piquante'],
+  ingredients: ['herbes de Provence', 'poivrons rouges', 'chorizo vegan', 'huile piquante'],
   description: '',
   vegan: true,
   pizza: true,
@@ -198,14 +198,17 @@ function createCard(dishes) {
     /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
     let panierButton = document.createElement("button")
     back.appendChild(panierButton)
-    panierButton.setAttribute('onclick', panier)
-    panierButton.id = "myBtn"
+    panierButton.className = "panier"
+    panierButton.setAttribute("onclick", "listen()")
     panierButton.innerText = "Ajouter au panier"
-    panierButton.style.bottom = 0;
-    panierButton.style.margin = "1%";
    /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
 
 }
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa */
+
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa */
 
 /* Filter */
 
@@ -237,16 +240,7 @@ function filterDish(filterToApply) {
 
 filterDish(null)
 
-/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa */
-function panier(ajouterPanier) {
-  let sectionPanier = document.getElementsByClassName("panierSection");
-  ajouterPanier = document.createElement("p");
-  panierP.innerText = pastadore.menu + pastadore.prix
-  sectionPanier.appendChild(panierP)
-}
 
-
-/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa */
 
 /* Dark mode */
 
