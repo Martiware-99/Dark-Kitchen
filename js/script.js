@@ -172,7 +172,6 @@ function createCard(dishes) {
     price.className = "prix"
     price.innerText = "prix : " + dishes.prix + " €"
 
-
     let platBack = document.createElement("h3")
     back.appendChild(platBack)
     platBack.innerText = dishes.menu
@@ -188,18 +187,11 @@ function createCard(dishes) {
     let liste = document.createElement("ul")
     back.appendChild(liste)
 
-    let listItem1 = document.createElement("li")
-    liste.appendChild(listItem1)
-    listItem1.innerText = dishes.ingredients[0]
-
-    let listItem2 = document.createElement("li")
-    liste.appendChild(listItem2)
-    listItem2.innerText = dishes.ingredients[1]
-
-    let listItem3 = document.createElement("li")
-    liste.appendChild(listItem3)
-    listItem3.innerText = dishes.ingredients[2]
-
+    for (let elem of dishes.ingredients){
+      let listItem = document.createElement("li")
+      liste.appendChild(listItem)
+      listItem.innerText = elem
+    }
 
     front.style.backgroundImage = "url('" + dishes.image + "')";
 
