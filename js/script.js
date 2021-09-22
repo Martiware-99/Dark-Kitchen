@@ -194,7 +194,6 @@ function createCard(dishes) {
     
     let panierButton = document.createElement("button")
     back.appendChild(panierButton)
-    panierButton.innerText = "Ajouter au panier"
 
     let secondChild= document.querySelector("#priceTag")
 

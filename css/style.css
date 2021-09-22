@@ -73,10 +73,13 @@ img {
 /* Panier */
 
 .panier {
-    display: flex;
-    position: absolute;
-    flex-direction: row;
-    align-self: flex-end;
+  width: 75%;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  margin: 1%;
+  left: 10%;
 }
 
 /* Repas */
@@ -87,7 +90,7 @@ img {
     gap: 1rem 1rem;
     grid-auto-rows: minmax(1fr, 1fr);
     grid-auto-flow: row;
-    padding: 1rem;
+    padding: 0 5%;
     box-sizing: border-box;
     font-size: 20px;
 }
@@ -126,15 +129,19 @@ img {
     height: 100%;
     backface-visibility: hidden;
     transform: rotateY(180deg);
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/rm21-paper-jira-8877.jpg?w=1000&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=60611f0ea4f05f8a35423584b963446f);
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
     color: rgb(146, 60, 34);
-    ;
-    justify-content: center;
+}
+
+.back > ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
 }
 
 .prix {
