@@ -146,62 +146,62 @@ const pastadore = [{
 /* Create Menu */
 
 function createCard(dishes) {
-  let cards = document.createElement("article")
-  cards.className = "card"
-  document.querySelector(".container").appendChild(cards)
-  
-  let front = document.createElement("div")
-  front.className = "front"
-  cards.appendChild(front)
-  
-  let back = document.createElement("div")
-  back.className = "back"
-  cards.appendChild(back)
-  
-  
-  let footer = document.createElement("footer")
-  front.appendChild(footer)
+    let cards = document.createElement("article")
+    cards.className = "card"
+    document.querySelector(".container").appendChild(cards)
 
-  let plat = document.createElement("p")
-  footer.appendChild(plat)
-  plat.className = "prix"
-  plat.innerText = dishes.menu
+    let front = document.createElement("div")
+    front.className = "front"
+    cards.appendChild(front)
 
-  let price = document.createElement("p")
-  footer.appendChild(price)
-  price.className = "prix"
-  price.innerText = "prix : " + dishes.prix + " €"
+    let back = document.createElement("div")
+    back.className = "back"
+    cards.appendChild(back)
 
 
-  let platBack = document.createElement("h3")
-  back.appendChild(platBack)
-  platBack.innerText = dishes.menu
+    let footer = document.createElement("footer")
+    front.appendChild(footer)
 
-  let description = document.createElement("p")
-  back.appendChild(description)
-  description.innerText = "Description : " + dishes.description
+    let plat = document.createElement("p")
+    footer.appendChild(plat)
+    plat.className = "prix"
+    plat.innerText = dishes.menu
 
-  let ingrédients = document.createElement("h4")
-  back.appendChild(ingrédients)
-  ingrédients.innerText = "Liste d'ingrédient :"
-
-  let liste = document.createElement("ul")
-  back.appendChild(liste)
-
-  let listItem1 = document.createElement("li")
-  liste.appendChild(listItem1)
-  listItem1.innerText  = dishes.ingredients[0]
-
-  let listItem2 = document.createElement("li")
-  liste.appendChild(listItem2)
-  listItem2.innerText  = dishes.ingredients[1]
-
-  let listItem3 = document.createElement("li")
-  liste.appendChild(listItem3)
-  listItem3.innerText  = dishes.ingredients[2]
+    let price = document.createElement("p")
+    footer.appendChild(price)
+    price.className = "prix"
+    price.innerText = "prix : " + dishes.prix + " €"
 
 
-  front.style.backgroundImage = "url('"+ dishes.image +"')";
+    let platBack = document.createElement("h3")
+    back.appendChild(platBack)
+    platBack.innerText = dishes.menu
+
+    let description = document.createElement("p")
+    back.appendChild(description)
+    description.innerText = "Description : " + dishes.description
+
+    let ingrédients = document.createElement("h4")
+    back.appendChild(ingrédients)
+    ingrédients.innerText = "Liste d'ingrédient :"
+
+    let liste = document.createElement("ul")
+    back.appendChild(liste)
+
+    let listItem1 = document.createElement("li")
+    liste.appendChild(listItem1)
+    listItem1.innerText = dishes.ingredients[0]
+
+    let listItem2 = document.createElement("li")
+    liste.appendChild(listItem2)
+    listItem2.innerText = dishes.ingredients[1]
+
+    let listItem3 = document.createElement("li")
+    liste.appendChild(listItem3)
+    listItem3.innerText = dishes.ingredients[2]
+
+
+    front.style.backgroundImage = "url('" + dishes.image + "')";
 
     /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
     let panierButton = document.createElement("button")
@@ -217,30 +217,30 @@ function createCard(dishes) {
 
 /* Filter */
 
-function filterDish(filterToApply){
-  let container = document.querySelector(".container");
-  while (container.firstChild) {
-    container.removeChild(container.firstChild);
-  }
-  
-  for (let dishes of pastadore){
-  if (filterToApply === null){
-    createCard(dishes)
-  } else {
-    if ((filterToApply === "vegan") && (dishes.vegan === true)){
-      createCard(dishes)
+function filterDish(filterToApply) {
+    let container = document.querySelector(".container");
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
     }
-    if ((filterToApply === "pizza") && (dishes.pizza === true)){
-      createCard(dishes)
+
+    for (let dishes of pastadore) {
+        if (filterToApply === null) {
+            createCard(dishes)
+        } else {
+            if ((filterToApply === "vegan") && (dishes.vegan === true)) {
+                createCard(dishes)
+            }
+            if ((filterToApply === "pizza") && (dishes.pizza === true)) {
+                createCard(dishes)
+            }
+            if ((filterToApply === "pasta") && (dishes.pasta === true)) {
+                createCard(dishes)
+            }
+            if ((filterToApply === "drink") && (dishes.drink === true)) {
+                createCard(dishes)
+            }
+        }
     }
-    if ((filterToApply === "pasta") && (dishes.pasta === true)){
-      createCard(dishes)
-    }
-    if ((filterToApply === "drink") && (dishes.drink === true)){
-      createCard(dishes)
-    }
-  }
-}
 }
 
 filterDish(null)
@@ -261,23 +261,33 @@ function panier(ajouterPanier) {
 function darktheme() {
     var element = document.body;
     element.classList.toggle("dark-mode");
- }
+}
 
 /* Comment zone */
 
-let displayZone = document.createElement('section');
+let displayZone = document.querySelector('.commentZone');
+displayZone.classList.add('zone');
 let title = document.createElement('h1');
 
-function commentTitle() {
-    title.innerText = 'Customers comments';
-    displayZone.appendChild(title);
-}
+
 
 function getComment() {
 
-    let commentZone = document.querySelector('textarea');
-    let comment = commentZone.value;
+    let comment = document.createTextNode('');
+    let nameVal = document.querySelector('#name').value;
+    let dateVal = document.querySelector('#date').value;
+    let commentContent = document.querySelector('#comText').value;
+
+    let input = [{
+        name: nameVal,
+        Date: dateVal,
+        commentText: commentContent,
+    }];
+    for (let elt of input) {
+        comment.appendData(elt.commentText + " " + " by " + elt.name + ", " + elt.Date);
+    }
     return comment;
+
 }
 
 function cmntDisplayZone() {
@@ -285,19 +295,19 @@ function cmntDisplayZone() {
     let para = document.createElement('p');
     let ul = document.createElement('ul');
     let li = document.createElement('li');
-    li.innerText = getComment();
+    li = getComment();
     ul.appendChild(li);
     para.appendChild(ul);
-    displayZone.appendChild(para);
+    displayZone.appendChild(ul);
     document.body.appendChild(displayZone);
+    displayZone.style.fontStyle = 'italic';
+    displayZone.style.color = 'darkblue';
 
 }
 
 function display() {
-    let button = document.querySelector('#button');
 
+    let button = document.querySelector('#button');
     button.addEventListener('click', cmntDisplayZone);
 }
-
-commentTitle();
 display();
