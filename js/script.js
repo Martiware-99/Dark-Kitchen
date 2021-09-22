@@ -136,6 +136,7 @@ const pastadore = [{
   drink:true,
 },]
 
+let totalPrice = 0;
 
 /* Create Menu */
 
@@ -197,20 +198,39 @@ function createCard(dishes) {
     panierButton.className = "panier";
     back.appendChild(panierButton)
 
-    let secondChild= document.querySelector("#priceTag")
-
     panierButton.addEventListener('click', e => {
-      console.log(e)
-      let item = document.createElement("p");
-      item.id = "item"
-      secondChild.parentElement.insertBefore(item, secondChild);
 
-      let i = []
-      item.innerText = dishes.menu + " : " + dishes.prix[i] + " €"
-      let priceTag = document.getElementById("priceTag");
-      priceTag.innerText = "Prix : " + i + "€"
+      let item = document.createElement("p");
+
+      document.getElementById("cartContainer").appendChild(item)
+      item.innerText = dishes.menu + " : " + dishes.prix + " €";
+      totalPrice = totalPrice + dishes.prix;
+      let priceTag = document.getElementById("priceTag")
+      priceTag.innerText = "Total : " + totalPrice + "€"
+
     });
 }
+
+// add prices/Panier
+
+
+
+//delete button
+
+  let deleteButton = document.querySelector("#deleteCart")
+
+  deleteButton.addEventListener('click', e => {
+    console.log(e)
+  let itemContainer = document.querySelector("#cartContainer");
+  while (itemContainer.firstChild){
+    itemContainer.removeChild(itemContainer.firstChild)
+  }
+  let priceTag = document.getElementById("priceTag")  
+  totalPrice = 0;
+  priceTag.innerText = "Total : " + totalPrice + "€"
+
+  })
+
 
 /* Filter */
 
@@ -241,6 +261,8 @@ function filterDish(filterToApply) {
 }
 
 filterDish(null)
+
+
 
 /* Dark mode */
 
