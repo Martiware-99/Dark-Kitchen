@@ -207,10 +207,6 @@ function createCard(dishes) {
       totalPrice = totalPrice + dishes.prix;
       let priceTag = document.getElementById("priceTag")
       priceTag.innerText = "Total : " + totalPrice + "€"
-<<<<<<< HEAD
-=======
-
->>>>>>> d6d00485e4c77d7db38fe781be7174df21904068
     });
 }
 
