@@ -141,6 +141,7 @@ const pastadore = [{
         pasta: false,
         drink: true,
     },
+
 ];
 
 /* Create Menu */
@@ -198,14 +199,16 @@ function createCard(dishes) {
     /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
     let panierButton = document.createElement("button")
     back.appendChild(panierButton)
-    panierButton.setAttribute('onclick', panier)
-    panierButton.id = "myBtn"
+    panierButton.className = "panier"
+    panierButton.setAttribute("onclick", "listen()")
     panierButton.innerText = "Ajouter au panier"
-    panierButton.style.bottom = 0;
-    panierButton.style.margin = "1%";
-    /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
 
 }
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa */
+
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa */
 
 /* Filter */
 
@@ -236,17 +239,6 @@ function filterDish(filterToApply) {
 }
 
 filterDish(null)
-
-/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa */
-function panier(ajouterPanier) {
-    let sectionPanier = document.getElementsByClassName("panierSection");
-    ajouterPanier = document.createElement("p");
-    panierP.innerText = pastadore.menu + pastadore.prix
-    sectionPanier.appendChild(panierP)
-}
-
-
-/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa */
 
 /* Dark mode */
 
