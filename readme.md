@@ -19,7 +19,7 @@ Création d'une dark kitchen :
 ![Perf](images/perf.png)
 
 ## to do list
-1. panier fonctionel
+1. ~~panier fonctionel~~
 2. arranger le css
 3. ~~créer un bouton "ajouter au panier" a l'arriere de la carte~~
 4. ~~créer un tri fonctionel~~
