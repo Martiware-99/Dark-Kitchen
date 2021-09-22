@@ -77,7 +77,6 @@ const pastadore = [{
 },
 {
   menu: 'vin rouge',
-  ingredients: ['red grapes', 'ethanol'],
   prix: 10.00,
   description: 'Cioccolata di Montebello Appassimento',
   image: 'https://www.sylvies.be/Uploads/Images/219/big/LOT00230423-F00112174.jpg',
@@ -88,7 +87,6 @@ const pastadore = [{
 },
 {
   menu: 'vin blanc',
-  ingredients: ['white grapes', 'ethanol'],
   prix: 10.00,
   description: 'Lampiasi Grillo',
   image: 'https://robbreport.com/wp-content/uploads/2020/04/lillie-1.jpg?w=1000',
@@ -99,7 +97,6 @@ const pastadore = [{
 },
 {
   menu: 'vin rosé',
-  ingredients: ['black grapes', 'white grapes', 'ethanol'],
   prix: 10.00,
   description: 'Rosatelo',
   image: 'https://cdn.vin.co/_clients_folder/perrin/perrin_ventoux_rose_2017_macro_jpg_20248_1024.jpg',
@@ -110,7 +107,6 @@ const pastadore = [{
 },
 {
   menu: 'Coca',
-  ingredients: ['sparkling water', 'sirop', 'caramel'],
   prix: 1.50,
   description: 'Zéro sucre validée par Romelu Lukaku',
   image: 'https://pbs.twimg.com/media/EUcoHLqXgAApD2l.jpg',
@@ -121,7 +117,6 @@ const pastadore = [{
 },
 {
   menu: 'Eau plate',
-  ingredients: ['mineral water'],
   prix: 1.00,
   description: 'spa Reine',
   image: 'https://www.rob-brussels.be/media/catalog/product/cache/4674fdbecbe8e81d26c2d902fe2fbc48/b/e/b-ea-plcon-1015-b-ea-plcon-1015-image_1-230217_2412.jpg',
@@ -132,7 +127,6 @@ const pastadore = [{
 },
 {
   menu: 'Eau pétillante',
-  ingredients: ['co2', 'mineral water'],
   prix: 1.00,
   description: 'spa Reine',
   image: 'https://shop.pure.organic/1721-medium_default/spa-reine-petillante-1l.jpg',
@@ -180,6 +174,7 @@ function createCard(dishes) {
     back.appendChild(description)
     description.innerText = "Description : " + dishes.description
 
+    if (dishes.hasOwnProperty("ingredients")){
     let ingrédients = document.createElement("h4")
     back.appendChild(ingrédients)
     ingrédients.innerText = "Liste d'ingrédient :"
@@ -192,18 +187,23 @@ function createCard(dishes) {
       liste.appendChild(listItem)
       listItem.innerText = elem
     }
+  } else {}
 
     front.style.backgroundImage = "url('" + dishes.image + "')";
 
-    /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+    
     let panierButton = document.createElement("button")
     back.appendChild(panierButton)
-    panierButton.setAttribute('onclick', panier)
-    panierButton.id = "myBtn"
     panierButton.innerText = "Ajouter au panier"
-    panierButton.style.bottom = 0;
-    panierButton.style.margin = "1%";
-   /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+
+    let secondChild= document.querySelector("#priceTag")
+
+    panierButton.addEventListener('click', e => {
+      console.log(e)
+      let item = document.createElement("p");
+      secondChild.parentElement.insertBefore(item, secondChild);
+      item.innerText = dishes.menu + " : " + dishes.prix + " €";
+    });
 
 }
 
@@ -237,16 +237,9 @@ function filterDish(filterToApply) {
 
 filterDish(null)
 
-/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa */
-function panier(ajouterPanier) {
-  let sectionPanier = document.getElementsByClassName("panierSection");
-  ajouterPanier = document.createElement("p");
-  panierP.innerText = pastadore.menu + pastadore.prix
-  sectionPanier.appendChild(panierP)
+function shoppingCart(adding){
+
 }
-
-
-/* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaa */
 
 /* Dark mode */
 

@@ -89,7 +89,6 @@ img {
     grid-auto-flow: row;
     padding: 1rem;
     box-sizing: border-box;
-    padding: 0 15%;
     font-size: 20px;
 }
 
