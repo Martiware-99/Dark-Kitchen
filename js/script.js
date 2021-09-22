@@ -134,8 +134,8 @@ const pastadore = [{
   pizza: false,
   pasta: false,
   drink:true,
-},
-];
+},]
+
 
 /* Create Menu */
 
@@ -182,10 +182,10 @@ function createCard(dishes) {
     let liste = document.createElement("ul")
     back.appendChild(liste)
 
-    for (let elem of dishes.ingredients){
-      let listItem = document.createElement("li")
-      liste.appendChild(listItem)
-      listItem.innerText = elem
+    for (let elem of dishes.ingredients) {
+        let listItem = document.createElement("li")
+        liste.appendChild(listItem)
+        listItem.innerText = elem
     }
   } else {}
 
@@ -204,7 +204,6 @@ function createCard(dishes) {
       secondChild.parentElement.insertBefore(item, secondChild);
       item.innerText = dishes.menu + " : " + dishes.prix + " €";
     });
-
 }
 
 /* Filter */
@@ -236,10 +235,6 @@ function filterDish(filterToApply) {
 }
 
 filterDish(null)
-
-function shoppingCart(adding){
-
-}
 
 /* Dark mode */
 
@@ -295,4 +290,33 @@ function display() {
     let button = document.querySelector('#button');
     button.addEventListener('click', cmntDisplayZone);
 }
+
+function clear() {
+
+    let comment = document.createTextNode('');
+    let inputNameContent = document.querySelector('#name').value = '';
+
+    let inputDateContent = document.querySelector('#date').value = '';
+
+    let commentContent = document.querySelector('#comText').value = '';
+
+
+    let input = [{
+        name: inputNameContent,
+        Date: inputDateContent,
+        commentText: commentContent,
+    }];
+    for (let elt of input) {
+        comment.appendData(elt.commentText + " " + " by " + elt.name + ", " + elt.Date);
+    }
+    return comment;
+
+
+}
+
+function emptyDisplay() {
+    let clearBtn = document.querySelector('#clear');
+    clearBtn.addEventListener('click', clear);
+}
 display();
+emptyDisplay();
