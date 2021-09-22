@@ -194,11 +194,14 @@ function createCard(dishes) {
 
     
     let panierButton = document.createElement("button")
+    panierButton.textContent = "Ajouter au panier";
+    panierButton.className = "panier";
     back.appendChild(panierButton)
 
     panierButton.addEventListener('click', e => {
 
       let item = document.createElement("p");
+
       document.getElementById("cartContainer").appendChild(item)
       item.innerText = dishes.menu + " : " + dishes.prix + " €";
       totalPrice = totalPrice + dishes.prix;
@@ -344,3 +347,18 @@ function emptyDisplay() {
 }
 display();
 emptyDisplay();
+
+
+/* Commande */ 
+
+function commander() {
+  alert("Merci pour votre commande !")
+}
+
+function deletePanier() {
+  let deleteP = document.getElementById("item");
+  deleteP.remove()
+}
+
+
+/* Total */

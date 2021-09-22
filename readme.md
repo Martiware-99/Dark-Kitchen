@@ -5,6 +5,7 @@ Création d'une dark kitchen :
 - Responsive design
 - Javascript Basics
 - The DOM
+- Shopping cart creation
 
 ## Lien
 
@@ -18,14 +19,8 @@ Création d'une dark kitchen :
 
 ![Perf](images/perf.png)
 
-## to do list
-1. panier fonctionel
-2. arranger le css
-3. ~~créer un bouton "ajouter au panier" a l'arriere de la carte~~
-4. ~~créer un tri fonctionel~~
-6. ~~update le js par la suite~~
-7. ~~ajouter des plats/boissons~~
-8. responsive design
-9. ~~liste d ingredients dynamique~~
-10. ~~tourner les cartes sur mobile~~
+## Credit 
 
+- [Martin](https://github.com/Martiware-99)
+- [Léon](https://github.com/FASH-hub)
+- [Dylan](https://github.com/Dyl-Richardson)
