@@ -44,7 +44,7 @@ const pastadore = [{
 },
 {
   menu: 'Margharita',
-  ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'tomates'],
+  ingredients: ['mozarella', 'basilic', 'tomates'],
   description: 'juste un délice',
   vegan: false,
   pizza: true,
@@ -55,7 +55,7 @@ const pastadore = [{
 },
 {
   menu: 'Pepperoni',
-  ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'poivrons', 'oignons', 'tranches de peperoni'],
+  ingredients: ['mozarella', 'basilic', 'poivrons', 'oignons', 'tranches de peperoni'],
   description: 'Préférée de tout le monde',
   vegan: false,
   pizza: true,
@@ -66,7 +66,7 @@ const pastadore = [{
 },
 {
   menu: 'Vegan Spicy Pepperoni',
-  ingredients: ['pâte à pizza', 'herbes de Provence', 'poivrons rouges', 'chorizo vegan', 'huile piquante'],
+  ingredients: ['herbes de Provence', 'poivrons rouges', 'chorizo vegan', 'huile piquante'],
   description: '',
   vegan: true,
   pizza: true,
@@ -136,6 +136,7 @@ const pastadore = [{
   drink:true,
 },]
 
+let totalPrice = 0;
 
 /* Create Menu */
 
@@ -195,15 +196,37 @@ function createCard(dishes) {
     let panierButton = document.createElement("button")
     back.appendChild(panierButton)
 
-    let secondChild= document.querySelector("#priceTag")
-
     panierButton.addEventListener('click', e => {
-      console.log(e)
+
       let item = document.createElement("p");
-      secondChild.parentElement.insertBefore(item, secondChild);
+      document.getElementById("cartContainer").appendChild(item)
       item.innerText = dishes.menu + " : " + dishes.prix + " €";
+      totalPrice = totalPrice + dishes.prix;
+      let priceTag = document.getElementById("priceTag")
+      priceTag.innerText = "Total : " + totalPrice + "€"
     });
 }
+
+// add prices/Panier
+
+
+
+//delete button
+
+  let deleteButton = document.querySelector("#deleteCart")
+
+  deleteButton.addEventListener('click', e => {
+    console.log(e)
+  let itemContainer = document.querySelector("#cartContainer");
+  while (itemContainer.firstChild){
+    itemContainer.removeChild(itemContainer.firstChild)
+  }
+  let priceTag = document.getElementById("priceTag")  
+  totalPrice = 0;
+  priceTag.innerText = "Total : " + totalPrice + "€"
+
+  })
+
 
 /* Filter */
 
@@ -234,6 +257,8 @@ function filterDish(filterToApply) {
 }
 
 filterDish(null)
+
+
 
 /* Dark mode */
 
