@@ -1,147 +1,147 @@
 const pastadore = [{
-        menu: 'pasta bolognese',
-        ingredients: ['penne, spaghetti ou tagliatelle', 'sauce tomate', 'viande hâchée'],
-        vegan: false,
-        pizza: false,
-        pasta: true,
-        drink: false,
-        description: 'Du vrai fait maison',
-        prix: 6.50,
-        image: "https://www.sprinklesandsprouts.com/wp-content/uploads/2019/04/Authentic-Spaghetti-Bolognese-SQ.jpg",
-    },
-    {
-        menu: 'carbonara',
-        ingredients: ['penne, spaghetti ou tagliatelle', 'jambon', 'crème fraîche'],
-        vegan: false,
-        pizza: false,
-        pasta: true,
-        drink: false,
-        description: 'Maestro des pâtes',
-        prix: 5.50,
-        image: "https://img.cuisineaz.com/610x610/2018/03/19/i137169-pates-aux-lardons-fumes-ricotta-et-parmesan.jpeg",
-    },
-    {
-        menu: 'carbonara vegan',
-        ingredients: ['penne, spaghetti ou tagliatelle', 'brocoli', 'crème fraîche'],
-        vegan: true,
-        pizza: false,
-        pasta: true,
-        drink: false,
-        description: 'International healthy pasta',
-        prix: 8.00,
-        image: "https://www.foodette.fr/files/products/pasta-pates-tagliatelles-italie-creme-citron-brocoli-pavot.JPG",
-    },
-    {
-        menu: 'tagliatelle tricolore',
-        ingredients: ['tagliatelle', 'courgette', 'basilic'],
-        vegan: true,
-        pizza: false,
-        pasta: true,
-        drink: false,
-        description: 'Idéal pour le soir',
-        prix: 8.00,
-        image: "https://images.eatsmarter.com/sites/default/files/styles/576x432/public/tricolore-tagliatelle-with-prawns-505201.jpg",
-    },
-    {
-        menu: 'vin rouge',
-        ingredients: ['red grapes', 'ethanol'],
-        prix: 10.00,
-        description: 'Podere',
-        image: 'https://www.demand.eu/images/productimages/big/italiaans-wijnpakketje-a.jpg',
-        vegan: false,
-        pizza: false,
-        pasta: false,
-        drink: true,
-    },
-    {
-        menu: 'vin blanc',
-        ingredients: ['white grapes', 'ethanol'],
-        prix: 10.00,
-        description: 'Orviete Classico',
-        image: 'https://www.vins-italiens.fr/636-large_default2/orvieto-doc-classico.jpg',
-        vegan: false,
-        pizza: false,
-        pasta: false,
-        drink: true,
-    },
-    {
-        menu: 'vin rosé',
-        ingredients: ['black grapes', 'white grapes', 'ethanol'],
-        prix: 10.00,
-        description: 'Rosatelo',
-        image: 'https://www.vins-italiens.fr/829-large_default2/rosatello-rosato.jpg',
-        vegan: false,
-        pizza: false,
-        pasta: false,
-        drink: true,
-    },
-    {
-        menu: 'Cola',
-        ingredients: ['sparkling water', 'sirop', 'caramel'],
-        prix: 1.50,
-        description: 'Zéro sucre validée par Romelu Lukaku',
-        image: 'https://pbs.twimg.com/media/EUcoHLqXgAApD2l.jpg',
-        vegan: false,
-        pizza: false,
-        pasta: false,
-        drink: true,
-    },
-    {
-        menu: 'Eau plate',
-        ingredients: ['mineral water'],
-        prix: 1.00,
-        description: 'spa Reine',
-        image: 'https://www.rob-brussels.be/media/catalog/product/cache/4674fdbecbe8e81d26c2d902fe2fbc48/b/e/b-ea-plcon-1015-b-ea-plcon-1015-image_1-230217_2412.jpg',
-        vegan: false,
-        pizza: false,
-        pasta: false,
-        drink: true,
-    },
-    {
-        menu: 'Eau pétillante',
-        ingredients: ['co2', 'mineral water'],
-        prix: 1.00,
-        description: 'spa Reine',
-        image: 'https://shop.pure.organic/1721-medium_default/spa-reine-petillante-1l.jpg',
-        vegan: false,
-        pizza: false,
-        pasta: false,
-        drink: true,
-    },
-    {
-        menu: 'Margharita',
-        ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'tomates'],
-        description: 'juste un délice',
-        vegan: true,
-        pizza: true,
-        pasta: false,
-        drink: false,
-        prix: 15.00,
-        image: 'https://cac.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fcac.2F2018.2F09.2F25.2F13d543a6-cdf7-400e-9c5a-b274a8f22e5e.2Ejpeg/748x372/quality/90/crop-from/center/pizza-margherita.jpeg',
-    },
-    {
-        menu: 'Pepperoni',
-        ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'poivrons', 'oignons', 'tranches de peperoni'],
-        description: 'Préférée de tout le monde',
-        vegan: false,
-        pizza: true,
-        pasta: false,
-        drink: false,
-        prix: 15.00,
-        image: 'https://img-3.journaldesfemmes.fr/J-Ghr27nHaONcrz46Fxq9HYsyTg=/750x500/smart/5f3ef94c1513478a954404a7b39eb177/recipe-jdf/10000901.jpg',
-    },
-    {
-        menu: 'Vegan Spicy Pepperoni',
-        ingredients: ['pâte à pizza', 'herbes de Provence', 'poivrons rouges', 'chorizo vegan', 'huile piquante'],
-        description: 'Délicieuse',
-        vegan: true,
-        pizza: true,
-        pasta: false,
-        drink: false,
-        prix: 13.50,
-        image: 'https://www.veganfreestyle.com/wp-content/uploads/2018/02/pizza-vegan.jpg',
-    },
-]
+  menu: 'pasta bolognese',
+  ingredients: ['penne, spaghetti ou tagliatelle', 'sauce tomate', 'viande hâchée'],
+  vegan: false,
+  pizza: false,
+  pasta: true,
+  drink:false,
+  description: 'Du vrai fait maison',
+  prix: 6.50,
+  image: "https://www.sprinklesandsprouts.com/wp-content/uploads/2019/04/Authentic-Spaghetti-Bolognese-SQ.jpg",
+},
+{
+  menu: 'carbonara',
+  ingredients: ['penne, spaghetti ou tagliatelle', 'jambon', 'crème fraîche'],
+  vegan: false,
+  pizza: false,
+  pasta: true,
+  drink:false,
+  description: 'Maestro des pâtes',
+  prix: 5.50,
+  image: "https://img.cuisineaz.com/610x610/2018/03/19/i137169-pates-aux-lardons-fumes-ricotta-et-parmesan.jpeg",
+},
+{
+  menu: 'carbonara vegan',
+  ingredients: ['penne, spaghetti ou tagliatelle', 'brocoli', 'crème fraîche'],
+  vegan: true,
+  pizza: false,
+  pasta: true,
+  drink:false,
+  description: 'International healthy pasta',
+  prix: 8.00,
+  image: "https://www.foodette.fr/files/products/pasta-pates-tagliatelles-italie-creme-citron-brocoli-pavot.JPG",
+},
+{
+  menu: 'tagliatelle tricolore',
+  ingredients: ['tagliatelle', 'courgette', 'basilic'],
+  vegan: false,
+  pizza: false,
+  pasta: true,
+  drink:false,
+  description: 'Idéal pour le soir',
+  prix: 8.00,
+  image: "https://www.fr.weightwatchers.be/images/2060/dynamic/foodandrecipes/2013/14/BE-FR_7021692_600x600.jpg",
+},
+{
+  menu: 'Margharita',
+  ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'tomates'],
+  description: 'juste un délice',
+  vegan: false,
+  pizza: true,
+  pasta: false,
+  drink:false,
+  prix: 15.00,
+  image: 'https://www.regal.fr/sites/art-de-vivre/files/pizza-margherita_istock.jpg',
+},
+{
+  menu: 'Pepperoni',
+  ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'poivrons', 'oignons', 'tranches de peperoni'],
+  description: 'Préférée de tout le monde',
+  vegan: false,
+  pizza: true,
+  pasta: false,
+  drink:false,
+  prix: 15.00,
+  image: 'https://images.pexels.com/photos/4109078/pexels-photo-4109078.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+},
+{
+  menu: 'Vegan Spicy Pepperoni',
+  ingredients: ['pâte à pizza', 'herbes de Provence', 'poivrons rouges', 'chorizo vegan', 'huile piquante'],
+  description: '',
+  vegan: true,
+  pizza: true,
+  pasta: false,
+  drink:false,
+  prix: 13.50,
+  image: 'https://healthyalie.com/wp-content/uploads/2021/04/healthy_alie_pizza_vegan_3_ingredients_2697-684x1024.png',
+},
+{
+  menu: 'vin rouge',
+  ingredients: ['red grapes', 'ethanol'],
+  prix: 10.00,
+  description: 'Cioccolata di Montebello Appassimento',
+  image: 'https://www.sylvies.be/Uploads/Images/219/big/LOT00230423-F00112174.jpg',
+  vegan: false,
+  pizza: false,
+  pasta: false,
+  drink:true,
+},
+{
+  menu: 'vin blanc',
+  ingredients: ['white grapes', 'ethanol'],
+  prix: 10.00,
+  description: 'Lampiasi Grillo',
+  image: 'https://robbreport.com/wp-content/uploads/2020/04/lillie-1.jpg?w=1000',
+  vegan: false,
+  pizza: false,
+  pasta: false,
+  drink:true,
+},
+{
+  menu: 'vin rosé',
+  ingredients: ['black grapes', 'white grapes', 'ethanol'],
+  prix: 10.00,
+  description: 'Rosatelo',
+  image: 'https://cdn.vin.co/_clients_folder/perrin/perrin_ventoux_rose_2017_macro_jpg_20248_1024.jpg',
+  vegan: false,
+  pizza: false,
+  pasta: false,
+  drink:true,
+},
+{
+  menu: 'Coca',
+  ingredients: ['sparkling water', 'sirop', 'caramel'],
+  prix: 1.50,
+  description: 'Zéro sucre validée par Romelu Lukaku',
+  image: 'https://pbs.twimg.com/media/EUcoHLqXgAApD2l.jpg',
+  vegan: false,
+  pizza: false,
+  pasta: false,
+  drink:true,
+},
+{
+  menu: 'Eau plate',
+  ingredients: ['mineral water'],
+  prix: 1.00,
+  description: 'spa Reine',
+  image: 'https://www.rob-brussels.be/media/catalog/product/cache/4674fdbecbe8e81d26c2d902fe2fbc48/b/e/b-ea-plcon-1015-b-ea-plcon-1015-image_1-230217_2412.jpg',
+  vegan: false,
+  pizza: false,
+  pasta: false,
+  drink:true,
+},
+{
+  menu: 'Eau pétillante',
+  ingredients: ['co2', 'mineral water'],
+  prix: 1.00,
+  description: 'spa Reine',
+  image: 'https://shop.pure.organic/1721-medium_default/spa-reine-petillante-1l.jpg',
+  vegan: false,
+  pizza: false,
+  pasta: false,
+  drink:true,
+},
+];
 
 /* Create Menu */
 
@@ -205,7 +205,7 @@ function createCard(dishes) {
 
 }
 
-// filter dishes
+/* Filter */
 
 function filterDish(filterToApply) {
     let container = document.querySelector(".container");
@@ -234,28 +234,6 @@ function filterDish(filterToApply) {
 }
 
 filterDish(null)
-
-/* List button */
-
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-
-function filterFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("myDropdown");
-    a = div.getElementsByTagName("a");
-    for (i = 0; i < a.length; i++) {
-        txtValue = a[i].textContent || a[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            a[i].style.display = "";
-        } else {
-            a[i].style.display = "none";
-        }
-    }
-}
 
 /* Dark mode */
 
