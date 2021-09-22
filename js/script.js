@@ -44,7 +44,7 @@ const pastadore = [{
 },
 {
   menu: 'Margharita',
-  ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'tomates'],
+  ingredients: ['mozarella', 'basilic', 'tomates'],
   description: 'juste un délice',
   vegan: false,
   pizza: true,
@@ -55,7 +55,7 @@ const pastadore = [{
 },
 {
   menu: 'Pepperoni',
-  ingredients: ['pâte à pizza', 'mozarella', 'basilic', 'poivrons', 'oignons', 'tranches de peperoni'],
+  ingredients: ['mozarella', 'basilic', 'poivrons', 'oignons', 'tranches de peperoni'],
   description: 'Préférée de tout le monde',
   vegan: false,
   pizza: true,
@@ -66,7 +66,7 @@ const pastadore = [{
 },
 {
   menu: 'Vegan Spicy Pepperoni',
-  ingredients: ['pâte à pizza', 'herbes de Provence', 'poivrons rouges', 'chorizo vegan', 'huile piquante'],
+  ingredients: ['herbes de Provence', 'poivrons rouges', 'chorizo vegan', 'huile piquante'],
   description: '',
   vegan: true,
   pizza: true,
@@ -193,6 +193,8 @@ function createCard(dishes) {
 
     
     let panierButton = document.createElement("button")
+    panierButton.textContent = "Ajouter au panier";
+    panierButton.className = "panier";
     back.appendChild(panierButton)
 
     let secondChild= document.querySelector("#priceTag")
@@ -200,8 +202,13 @@ function createCard(dishes) {
     panierButton.addEventListener('click', e => {
       console.log(e)
       let item = document.createElement("p");
+      item.id = "item"
       secondChild.parentElement.insertBefore(item, secondChild);
-      item.innerText = dishes.menu + " : " + dishes.prix + " €";
+
+      let i = []
+      item.innerText = dishes.menu + " : " + dishes.prix[i] + " €"
+      let priceTag = document.getElementById("priceTag");
+      priceTag.innerText = "Prix : " + i + "€"
     });
 }
 
@@ -319,3 +326,18 @@ function emptyDisplay() {
 }
 display();
 emptyDisplay();
+
+
+/* Commande */ 
+
+function commander() {
+  alert("Merci pour votre commande !")
+}
+
+function deletePanier() {
+  let deleteP = document.getElementById("item");
+  deleteP.remove()
+}
+
+
+/* Total */
