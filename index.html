@@ -23,7 +23,6 @@
 
     <!-- Panier -->
 
-
     <!-- Menu -->
     <main>
         <h2 class="plat"> liste des plats </h2>
@@ -42,25 +41,36 @@
     </main>
 
     <!-- Section Commentaire -->
-    <fieldset>
+    <section class="commentZone">
+        <fieldset>
 
-        <legend>Votre avis compte énormement</legend>
-        <img src="images/thanks.gif" title="Thanks">
-        <form>
-            <label for="comment">Avis du client:</label><br>
-            <textarea placeholder="Votre avis suivi par votre nom/pseudo..."></textarea>
-        </form>
-        <button id="button">Envoyer</button>
-    </fieldset>
+            <legend>Votre avis compte énormement</legend>
+            <img src="images/thanks.gif" title="Thanks">
 
+            Nom: <input type="text" id="name"><br>
+            Date: <input type="date" id="date"><br>
+            Commentaire: <textarea rows="5" id="comText"> </textarea>
+            <span id="click">
+                <button id="button">Add</button>
+                <button id="clear">Clear</button>
+            </span>
+
+        </fieldset>
+    </section>
     <!-- Footer -->
     <footer class="footer">
         <!-- Lien reseaux -->
         <nav>
             <p>Official social account :</p>
-            <a href="https://facebook.com/test" target="_blank"class="reseaux"><ion-icon name="logo-facebook" size="large"></ion-icon></a>
-            <a href="https://twitter.com/test" target="_blank"class="reseaux"><ion-icon name="logo-twitter" size="large"></ion-icon></a>
-            <a href="https://instagram.com/test" target="_blank"class="reseaux"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
+            <a href="https://facebook.com/test" target="_blank" class="reseaux">
+                <ion-icon name="logo-facebook" size="large"></ion-icon>
+            </a>
+            <a href="https://twitter.com/test" target="_blank" class="reseaux">
+                <ion-icon name="logo-twitter" size="large"></ion-icon>
+            </a>
+            <a href="https://instagram.com/test" target="_blank" class="reseaux">
+                <ion-icon name="logo-instagram" size="large"></ion-icon>
+            </a>
         </nav>
 
         <!-- Note restau -->
