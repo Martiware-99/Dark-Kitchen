@@ -29,6 +29,9 @@ header {
 
 body {
   font-family: 'Freehand', cursive;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
 }
 
 .footer {
